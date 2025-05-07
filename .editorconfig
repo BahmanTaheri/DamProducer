@@ -1,0 +1,15 @@
+﻿[*.cs]
+
+# Default severity for analyzer diagnostics with category 'Reliability'
+dotnet_analyzer_diagnostic.category-Reliability.severity = silent
+
+# Default severity for analyzer diagnostics with category 'Globalization'
+dotnet_analyzer_diagnostic.category-Globalization.severity = none
+
+# IDE0058: Expression value is never used
+csharp_style_unused_value_expression_statement_preference = unused_local_variable:silent
+
+# CA1031: Do not catch general exception types
+dotnet_diagnostic.CA1031.severity = silent
+csharp_style_expression_bodied_methods=false:silent
+csharp_style_expression_bodied_operators=true:silent

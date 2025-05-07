@@ -1,0 +1,899 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.3.0.0\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.3.0.0\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" />
+  <Import Project="..\packages\Microsoft.NetFramework.Analyzers.3.0.0\build\Microsoft.NetFramework.Analyzers.props" Condition="Exists('..\packages\Microsoft.NetFramework.Analyzers.3.0.0\build\Microsoft.NetFramework.Analyzers.props')" />
+  <Import Project="..\packages\Microsoft.NetCore.Analyzers.3.0.0\build\Microsoft.NetCore.Analyzers.props" Condition="Exists('..\packages\Microsoft.NetCore.Analyzers.3.0.0\build\Microsoft.NetCore.Analyzers.props')" />
+  <Import Project="..\packages\Microsoft.CodeQuality.Analyzers.3.0.0\build\Microsoft.CodeQuality.Analyzers.props" Condition="Exists('..\packages\Microsoft.CodeQuality.Analyzers.3.0.0\build\Microsoft.CodeQuality.Analyzers.props')" />
+  <Import Project="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.0.0\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.0.0\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E199A62E-187E-4768-957E-9340D5BF4CB1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DamProducer</RootNamespace>
+    <AssemblyName>DamProducer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>D:\prc\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3D16FAC76C17DBE7E31390344C1A5173FC994488</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>DamProducer_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\main2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ArzTextBox">
+      <HintPath>..\..\..\farsi\ArzTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="DateControlBT, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DateControlBT\DateControlBT\bin\Debug\DateControlBT.dll</HintPath>
+    </Reference>
+    <Reference Include="FarsiLibrary.Utils, Version=1.9.0.0, Culture=neutral, PublicKeyToken=def7c46cace23f8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Farsi\FarsiLibrary\FarsiLibrary.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport, Version=2024.2.0.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Bars, Version=2020.1.17.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="FastReport.Compat, Version=2024.2.0.0, Culture=neutral, PublicKeyToken=5ceb240df42bf6e8" />
+    <Reference Include="FastReport.DataVisualization, Version=2024.2.0.0, Culture=neutral, PublicKeyToken=5ceb240df42bf6e8" />
+    <Reference Include="FastReport.Editor, Version=2024.2.0.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c" />
+    <Reference Include="Infragistics4.Shared.v14.2, Version=14.2.20142.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.AppStylistSupport.v14.2, Version=14.2.20142.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.DataVisualization.Shared.v14.2, Version=14.2.20142.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.DataVisualization.UltraDataChart.v14.2, Version=14.2.20142.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.Misc.v14.2, Version=14.2.20142.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.Portable.Core.v14.2, Version=14.2.20142.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.UltraWinCalcManager.v14.2, Version=14.2.20142.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinDataSource.v14.2, Version=14.2.20142.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v14.2, Version=14.2.20142.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinExplorerBar.v14.2, Version=14.2.20142.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v14.2, Version=14.2.20142.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinListBar.v14.2, Version=14.2.20142.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinListView.v14.2, Version=14.2.20142.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinMaskedEdit.v14.2, Version=14.2.20142.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinPrintPreviewDialog.v14.2, Version=14.2.20142.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinStatusBar.v14.2, Version=14.2.20142.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinTabbedMdi.v14.2, Version=14.2.20142.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v14.2, Version=14.2.20142.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v14.2, Version=14.2.20142.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.UltraWinTree.v14.2, Version=14.2.20142.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.v14.2, Version=14.2.20142.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dset\db_DataSetDarkhast.cs">
+      <DependentUpon>db_DataSetDarkhast.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dset\db_DataSetDarkhast.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_DataSetDarkhast.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dset\db_DataSetGTP.cs">
+      <DependentUpon>db_DataSetGTP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dset\db_DataSetGTP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_DataSetGTP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dset\db_DataSetPerson.cs">
+      <DependentUpon>db_DataSetPerson.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dset\db_DataSetResid.cs">
+      <DependentUpon>db_DataSetResid.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dset\db_DataSetResid.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_DataSetResid.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dset\db_DataSetPerson.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_DataSetPerson.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dset\db_DataSetContent.cs">
+      <DependentUpon>db_DataSetContent.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dset\db_DataSetContent.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_DataSetContent.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form\General\frmListPishFk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\General\frmListPishFk.Designer.cs">
+      <DependentUpon>frmListPishFk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\General\frmSefareshBazgasht.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\General\frmSefareshBazgasht.Designer.cs">
+      <DependentUpon>frmSefareshBazgasht.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRptFrooshKol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRptFrooshKol.Designer.cs">
+      <DependentUpon>frmRptFrooshKol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRptKharidRooz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRptKharidRooz.designer.cs">
+      <DependentUpon>frmRptKharidRooz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Tools\frmBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Tools\frmBackup.Designer.cs">
+      <DependentUpon>frmBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\General\frmPishFaktor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\General\frmPishFaktor.designer.cs">
+      <DependentUpon>frmPishFaktor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\General\frmResidanbar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\General\frmResidanbar.designer.cs">
+      <DependentUpon>frmResidanbar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\General\frmSefaresh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\General\frmSefaresh.Designer.cs">
+      <DependentUpon>frmSefaresh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Formool\frmFContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Formool\frmFContent.Designer.cs">
+      <DependentUpon>frmFContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\General\frmGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\General\frmGroups.Designer.cs">
+      <DependentUpon>frmGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\General\frmBaskol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\General\frmBaskol.Designer.cs">
+      <DependentUpon>frmBaskol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Tools\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Tools\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Formool\frmKol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Formool\frmKol.Designer.cs">
+      <DependentUpon>frmKol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\General\frmListDarkhast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\General\frmListDarkhast.Designer.cs">
+      <DependentUpon>frmListDarkhast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Formool\frmCntMatter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Formool\frmCntMatter.Designer.cs">
+      <DependentUpon>frmCntMatter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Tools\frmItemVal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Tools\frmItemVal.Designer.cs">
+      <DependentUpon>frmItemVal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\General\frmKasr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\General\frmKasr.Designer.cs">
+      <DependentUpon>frmKasr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRptCartexKala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRptCartexKala.Designer.cs">
+      <DependentUpon>frmRptCartexKala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\General\frmBagResid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\General\frmBagResid.Designer.cs">
+      <DependentUpon>frmBagResid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\General\frmBags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\General\frmBags.Designer.cs">
+      <DependentUpon>frmBags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\General\frmBagKasr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\General\frmBagKasr.Designer.cs">
+      <DependentUpon>frmBagKasr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\General\frmPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\General\frmPerson.Designer.cs">
+      <DependentUpon>frmPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\General\frmResidKala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\General\frmResidKala.Designer.cs">
+      <DependentUpon>frmResidKala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\General\frmResid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\General\frmResid.Designer.cs">
+      <DependentUpon>frmResid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Tools\frmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Tools\frmUsers.Designer.cs">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRptFroosh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRptFroosh.Designer.cs">
+      <DependentUpon>frmRptFroosh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRptFrooshJens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRptFrooshJens.Designer.cs">
+      <DependentUpon>frmRptFrooshJens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRptKharidar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRptKharidar.Designer.cs">
+      <DependentUpon>frmRptKharidar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\General\frmMojodi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\General\frmMojodi.Designer.cs">
+      <DependentUpon>frmMojodi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\General\frmMojodiAvalye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\General\frmMojodiAvalye.Designer.cs">
+      <DependentUpon>frmMojodiAvalye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRptKharid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRptKharid.Designer.cs">
+      <DependentUpon>frmRptKharid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRptFrooshRooz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRptFrooshRooz.Designer.cs">
+      <DependentUpon>frmRptFrooshRooz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Tools\frmReplac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Tools\frmReplac.Designer.cs">
+      <DependentUpon>frmReplac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRptChangeCust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRptChangeCust.Designer.cs">
+      <DependentUpon>frmRptChangeCust.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRptCustomiz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRptCustomiz.Designer.cs">
+      <DependentUpon>frmRptCustomiz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Tools\frmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Tools\frmSetting.Designer.cs">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRptFaktor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRptFaktor.Designer.cs">
+      <DependentUpon>frmRptFaktor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Tools\frmPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Tools\frmPrint.Designer.cs">
+      <DependentUpon>frmPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\General\frmSelectYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\General\frmSelectYear.Designer.cs">
+      <DependentUpon>frmSelectYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRptCartexKise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRptCartexKise.Designer.cs">
+      <DependentUpon>frmRptCartexKise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRptKharidKise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRptKharidKise.Designer.cs">
+      <DependentUpon>frmRptKharidKise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRptAmani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRptAmani.Designer.cs">
+      <DependentUpon>frmRptAmani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Tools\frmSelectMVD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Tools\frmSelectMVD.Designer.cs">
+      <DependentUpon>frmSelectMVD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\General\frmDafaterMojoodi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\General\frmDafaterMojoodi.Designer.cs">
+      <DependentUpon>frmDafaterMojoodi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\General\frmMojoodiAvalKise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\General\frmMojoodiAvalKise.Designer.cs">
+      <DependentUpon>frmMojoodiAvalKise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Report\frmRptEtehadieh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Report\frmRptEtehadieh.Designer.cs">
+      <DependentUpon>frmRptEtehadieh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\General\frmFastPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\General\frmFastPerson.Designer.cs">
+      <DependentUpon>frmFastPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFastDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFastDriver.Designer.cs">
+      <DependentUpon>frmFastDriver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="function.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="messageBoxFa.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form\General\frmListPishFk.resx">
+      <DependentUpon>frmListPishFk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\General\frmMojoodiAvalKise.resx">
+      <DependentUpon>frmMojoodiAvalKise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\General\frmSefareshBazgasht.resx">
+      <DependentUpon>frmSefareshBazgasht.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRptAmani.resx">
+      <DependentUpon>frmRptAmani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRptEtehadieh.resx">
+      <DependentUpon>frmRptEtehadieh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRptFrooshKol.resx">
+      <DependentUpon>frmRptFrooshKol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRptKharidRooz.resx">
+      <DependentUpon>frmRptKharidRooz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Tools\frmBackup.resx">
+      <DependentUpon>frmBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\General\frmBaskol.resx">
+      <DependentUpon>frmBaskol.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\General\frmListDarkhast.resx">
+      <DependentUpon>frmListDarkhast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\General\frmMojodiAvalye.resx">
+      <DependentUpon>frmMojodiAvalye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\General\frmPishFaktor.resx">
+      <DependentUpon>frmPishFaktor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\General\frmResidanbar.resx">
+      <DependentUpon>frmResidanbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\General\frmSefaresh.resx">
+      <DependentUpon>frmSefaresh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Formool\frmFContent.resx">
+      <DependentUpon>frmFContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\General\frmGroups.resx">
+      <DependentUpon>frmGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Tools\frmUsers.resx">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Tools\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Formool\frmKol.resx">
+      <DependentUpon>frmKol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Formool\frmCntMatter.resx">
+      <DependentUpon>frmCntMatter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Tools\frmItemVal.resx">
+      <DependentUpon>frmItemVal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\General\frmKasr.resx">
+      <DependentUpon>frmKasr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRptCartexKala.resx">
+      <DependentUpon>frmRptCartexKala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\General\frmBagResid.resx">
+      <DependentUpon>frmBagResid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\General\frmBags.resx">
+      <DependentUpon>frmBags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\General\frmBagKasr.resx">
+      <DependentUpon>frmBagKasr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\General\frmPerson.resx">
+      <DependentUpon>frmPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\General\frmResidKala.resx">
+      <DependentUpon>frmResidKala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\General\frmResid.resx">
+      <DependentUpon>frmResid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRptFroosh.resx">
+      <DependentUpon>frmRptFroosh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRptFrooshJens.resx">
+      <DependentUpon>frmRptFrooshJens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRptKharidar.resx">
+      <DependentUpon>frmRptKharidar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\General\frmMojodi.resx">
+      <DependentUpon>frmMojodi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRptKharid.resx">
+      <DependentUpon>frmRptKharid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRptFrooshRooz.resx">
+      <DependentUpon>frmRptFrooshRooz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Tools\frmReplac.resx">
+      <DependentUpon>frmReplac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRptChangeCust.resx">
+      <DependentUpon>frmRptChangeCust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRptCustomiz.resx">
+      <DependentUpon>frmRptCustomiz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Tools\frmSetting.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRptFaktor.resx">
+      <DependentUpon>frmRptFaktor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Tools\frmPrint.resx">
+      <DependentUpon>frmPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\General\frmSelectYear.resx">
+      <DependentUpon>frmSelectYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRptCartexKise.resx">
+      <DependentUpon>frmRptCartexKise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Report\frmRptKharidKise.resx">
+      <DependentUpon>frmRptKharidKise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Tools\frmSelectMVD.resx">
+      <DependentUpon>frmSelectMVD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\General\frmDafaterMojoodi.resx">
+      <DependentUpon>frmDafaterMojoodi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\General\frmFastPerson.resx">
+      <DependentUpon>frmFastPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFastDriver.resx">
+      <DependentUpon>frmFastDriver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dset\db_DataSetDarkhast.xsc">
+      <DependentUpon>db_DataSetDarkhast.xsd</DependentUpon>
+    </None>
+    <None Include="Dset\db_DataSetDarkhast.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>db_DataSetDarkhast.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dset\db_DataSetDarkhast.xss">
+      <DependentUpon>db_DataSetDarkhast.xsd</DependentUpon>
+    </None>
+    <None Include="Dset\db_DataSetGTP.xsc">
+      <DependentUpon>db_DataSetGTP.xsd</DependentUpon>
+    </None>
+    <None Include="Dset\db_DataSetGTP.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_DataSetGTP.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dset\db_DataSetGTP.xss">
+      <DependentUpon>db_DataSetGTP.xsd</DependentUpon>
+    </None>
+    <None Include="Dset\db_DataSetResid.xsc">
+      <DependentUpon>db_DataSetResid.xsd</DependentUpon>
+    </None>
+    <None Include="Dset\db_DataSetResid.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_DataSetResid.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dset\db_DataSetResid.xss">
+      <DependentUpon>db_DataSetResid.xsd</DependentUpon>
+    </None>
+    <None Include="Dset\db_DataSetPerson.xsc">
+      <DependentUpon>db_DataSetPerson.xsd</DependentUpon>
+    </None>
+    <None Include="Dset\db_DataSetPerson.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_DataSetPerson.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dset\db_DataSetPerson.xss">
+      <DependentUpon>db_DataSetPerson.xsd</DependentUpon>
+    </None>
+    <None Include="Dset\db_DataSetContent.xsc">
+      <DependentUpon>db_DataSetContent.xsd</DependentUpon>
+    </None>
+    <None Include="Dset\db_DataSetContent.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_DataSetContent.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dset\db_DataSetContent.xss">
+      <DependentUpon>db_DataSetContent.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order-check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReportCustom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report-Prd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReportSell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BIN\Debug\LogMark.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mater.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Insock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chek.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\replace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customRpt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArchiveRpt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editRpt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tarif.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.0.0\analyzers\dotnet\Microsoft.CodeAnalysis.VersionCheckAnalyzer.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeQuality.Analyzers.3.0.0\analyzers\dotnet\cs\Humanizer.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeQuality.Analyzers.3.0.0\analyzers\dotnet\cs\Microsoft.CodeQuality.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeQuality.Analyzers.3.0.0\analyzers\dotnet\cs\Microsoft.CodeQuality.CSharp.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetCore.Analyzers.3.0.0\analyzers\dotnet\cs\Microsoft.NetCore.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetCore.Analyzers.3.0.0\analyzers\dotnet\cs\Microsoft.NetCore.CSharp.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.3.0.0\analyzers\dotnet\cs\Microsoft.NetFramework.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.3.0.0\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="FastReport.Editor">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.0.0\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.0.0\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeQuality.Analyzers.3.0.0\build\Microsoft.CodeQuality.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeQuality.Analyzers.3.0.0\build\Microsoft.CodeQuality.Analyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.NetCore.Analyzers.3.0.0\build\Microsoft.NetCore.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.NetCore.Analyzers.3.0.0\build\Microsoft.NetCore.Analyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.NetFramework.Analyzers.3.0.0\build\Microsoft.NetFramework.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.NetFramework.Analyzers.3.0.0\build\Microsoft.NetFramework.Analyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.3.0.0\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.3.0.0\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

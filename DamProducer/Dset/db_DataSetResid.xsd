@@ -1,0 +1,1263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="db_DataSetResid" targetNamespace="http://tempuri.org/db_DataSetResid.xsd" xmlns:mstns="http://tempuri.org/db_DataSetResid.xsd" xmlns="http://tempuri.org/db_DataSetResid.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DamProducer.Properties.Settings.GlobalReference.Default.ConString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_AnbarTA" GeneratorDataComponentClassName="View_AnbarTA" Name="View_Anbar" UserDataComponentName="View_AnbarTA">
+            <MainSource>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.View_Anbar" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Code_anbar, Name_anbar FROM dbo.View_Anbar</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Code_anbar" DataSetColumn="Code_anbar" />
+              <Mapping SourceColumn="Name_anbar" DataSetColumn="Name_anbar" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_MatterTA" GeneratorDataComponentClassName="View_MatterTA" Name="View_Matter" UserDataComponentName="View_MatterTA">
+            <MainSource>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.View_Matter" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Code_matter, Name_matter, Tax, Point_Stone
+FROM     View_Matter
+ORDER BY Name_matter</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Code_matter" DataSetColumn="Code_matter" />
+              <Mapping SourceColumn="Name_matter" DataSetColumn="Name_matter" />
+              <Mapping SourceColumn="Tax" DataSetColumn="Tax" />
+              <Mapping SourceColumn="Point_Stone" DataSetColumn="Point_Stone" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_PersonTA" GeneratorDataComponentClassName="View_PersonTA" Name="View_Person" UserDataComponentName="View_PersonTA">
+            <MainSource>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.View_Person" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Code_fro, name_fro, Addres
+FROM     View_Person
+ORDER BY name_fro</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Code_fro" DataSetColumn="Code_fro" />
+              <Mapping SourceColumn="name_fro" DataSetColumn="name_fro" />
+              <Mapping SourceColumn="Addres" DataSetColumn="Addres" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="InsertQuery">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO Tbl_Person
+                         (name_fro, Code_mahiat)
+VALUES        (@Name, 2)
+</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Name" ColumnName="name_fro" DataSourceName="db_Producer.dbo.Tbl_Person" DataTypeServer="nvarchar(150)" DbType="String" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="150" SourceColumn="name_fro" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_TahvilTA" GeneratorDataComponentClassName="View_TahvilTA" Name="View_Tahvil" UserDataComponentName="View_TahvilTA">
+            <MainSource>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.View_Tahvil" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Code_tahvil, Name_tahvil FROM dbo.View_Tahvil</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Code_tahvil" DataSetColumn="Code_tahvil" />
+              <Mapping SourceColumn="Name_tahvil" DataSetColumn="Name_tahvil" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_VahedTA" GeneratorDataComponentClassName="View_VahedTA" Name="View_Vahed" UserDataComponentName="View_VahedTA">
+            <MainSource>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.View_Vahed" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Code_vahed, Name_vahed FROM dbo.View_Vahed</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Code_vahed" DataSetColumn="Code_vahed" />
+              <Mapping SourceColumn="Name_vahed" DataSetColumn="Name_vahed" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_DriverTA" GeneratorDataComponentClassName="View_DriverTA" Name="View_Driver" UserDataComponentName="View_DriverTA">
+            <MainSource>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.View_Driver" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM dbo.View_Driver</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Code_fro" DataSetColumn="Code_fro" />
+              <Mapping SourceColumn="name_fro" DataSetColumn="name_fro" />
+              <Mapping SourceColumn="Addres" DataSetColumn="Addres" />
+              <Mapping SourceColumn="Num_Car" DataSetColumn="Num_Car" />
+              <Mapping SourceColumn="Code_meli" DataSetColumn="Code_meli" />
+              <Mapping SourceColumn="mobile" DataSetColumn="mobile" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="InsertQuery">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO Tbl_Person
+                         (name_fro, Code_mahiat, Num_Car, Code_meli)
+VALUES        (@Name, 3,@NumCar)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Name" ColumnName="name_fro" DataSourceName="db_Producer.dbo.Tbl_Person" DataTypeServer="nvarchar(150)" DbType="String" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="150" SourceColumn="name_fro" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="NumCar" ColumnName="Num_Car" DataSourceName="db_Producer.dbo.Tbl_Person" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@NumCar" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="Num_Car" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateDriver" Modifier="Public" Name="UpdateDriver" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="UpdateDriver">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE       Tbl_Person
+SET                Num_Car = @NC, Code_meli = @MCode, name_fro = @Name, mobile = @Mobile
+WHERE        (Code_fro = @Code)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="NC" ColumnName="Num_Car" DataSourceName="db_Producer.dbo.Tbl_Person" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@NC" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="Num_Car" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="MCode" ColumnName="Code_meli" DataSourceName="db_Producer.dbo.Tbl_Person" DataTypeServer="nvarchar(16)" DbType="String" Direction="Input" ParameterName="@MCode" Precision="0" ProviderType="NVarChar" Scale="0" Size="16" SourceColumn="Code_meli" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Name" ColumnName="name_fro" DataSourceName="db_Producer.dbo.Tbl_Person" DataTypeServer="nvarchar(150)" DbType="String" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="150" SourceColumn="name_fro" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Mobile" ColumnName="mobile" DataSourceName="db_Producer.dbo.Tbl_Person" DataTypeServer="nvarchar(15)" DbType="String" Direction="Input" ParameterName="@Mobile" Precision="0" ProviderType="NVarChar" Scale="0" Size="15" SourceColumn="mobile" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Code" ColumnName="Code_fro" DataSourceName="db_Producer.dbo.Tbl_Person" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Code" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Code_fro" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Tbl_ResidTA" GeneratorDataComponentClassName="Tbl_ResidTA" Name="Tbl_Resid" UserDataComponentName="Tbl_ResidTA">
+            <MainSource>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.Tbl_Resid" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Tbl_Resid] WHERE (([Code_resid] = @Original_Code_resid) AND ((@IsNull_Date_resid = 1 AND [Date_resid] IS NULL) OR ([Date_resid] = @Original_Date_resid)) AND ((@IsNull_Type_resid = 1 AND [Type_resid] IS NULL) OR ([Type_resid] = @Original_Type_resid)) AND ((@IsNull_Code_fro = 1 AND [Code_fro] IS NULL) OR ([Code_fro] = @Original_Code_fro)) AND ((@IsNull_Code_faktor = 1 AND [Code_faktor] IS NULL) OR ([Code_faktor] = @Original_Code_faktor)) AND ((@IsNull_Date_faktor = 1 AND [Date_faktor] IS NULL) OR ([Date_faktor] = @Original_Date_faktor)) AND ((@IsNull_Code_driver = 1 AND [Code_driver] IS NULL) OR ([Code_driver] = @Original_Code_driver)) AND ((@IsNull_Code_anbar = 1 AND [Code_anbar] IS NULL) OR ([Code_anbar] = @Original_Code_anbar)) AND ((@IsNull_Code_tahvil = 1 AND [Code_tahvil] IS NULL) OR ([Code_tahvil] = @Original_Code_tahvil)) AND ((@IsNull_Number_car = 1 AND [Number_car] IS NULL) OR ([Number_car] = @Original_Number_car)) AND ((@IsNull_Price_haml = 1 AND [Price_haml] IS NULL) OR ([Price_haml] = @Original_Price_haml)) AND ((@IsNull_Price_bargiri = 1 AND [Price_bargiri] IS NULL) OR ([Price_bargiri] = @Original_Price_bargiri)) AND ((@IsNull_Price_takhlye = 1 AND [Price_takhlye] IS NULL) OR ([Price_takhlye] = @Original_Price_takhlye)) AND ((@IsNull_Price_other = 1 AND [Price_other] IS NULL) OR ([Price_other] = @Original_Price_other)) AND ((@IsNull_Takhfif = 1 AND [Takhfif] IS NULL) OR ([Takhfif] = @Original_Takhfif)) AND ((@IsNull_PriceKilo = 1 AND [PriceKilo] IS NULL) OR ([PriceKilo] = @Original_PriceKilo)) AND ((@IsNull_KasriKilo = 1 AND [KasriKilo] IS NULL) OR ([KasriKilo] = @Original_KasriKilo)) AND ((@IsNull_NumBaskool = 1 AND [NumBaskool] IS NULL) OR ([NumBaskool] = @Original_NumBaskool)) AND ((@IsNull_PrintEn = 1 AND [PrintEn] IS NULL) OR ([PrintEn] = @Original_PrintEn)) AND ((@IsNull_Kharid = 1 AND [Kharid] IS NULL) OR ([Kharid] = @Original_Kharid)) AND ([SanadFlag] = @Original_SanadFlag) AND ([DaraiFlag] = @Original_DaraiFlag))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Code_resid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_resid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Date_resid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Date_resid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Date_resid" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Date_resid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Type_resid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Type_resid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Type_resid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Type_resid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Code_fro" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_fro" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Code_fro" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_fro" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Code_faktor" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_faktor" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Code_faktor" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Code_faktor" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Date_faktor" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Date_faktor" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Date_faktor" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Date_faktor" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Code_driver" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_driver" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Code_driver" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_driver" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Code_anbar" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_anbar" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Code_anbar" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_anbar" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Code_tahvil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_tahvil" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Code_tahvil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_tahvil" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Number_car" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Number_car" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Number_car" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Number_car" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price_haml" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price_haml" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Price_haml" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Price_haml" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price_bargiri" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price_bargiri" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Price_bargiri" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Price_bargiri" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price_takhlye" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price_takhlye" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Price_takhlye" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Price_takhlye" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price_other" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price_other" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Price_other" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Price_other" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Takhfif" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Takhfif" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Takhfif" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Takhfif" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PriceKilo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PriceKilo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_PriceKilo" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PriceKilo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_KasriKilo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="KasriKilo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_KasriKilo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="KasriKilo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_NumBaskool" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NumBaskool" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_NumBaskool" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NumBaskool" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PrintEn" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PrintEn" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_PrintEn" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="PrintEn" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Kharid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Kharid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@Original_Kharid" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="Kharid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_SanadFlag" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SanadFlag" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_DaraiFlag" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="DaraiFlag" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Tbl_Resid] ([Code_resid], [Date_resid], [Type_resid], [Code_fro], [Code_faktor], [Date_faktor], [Code_driver], [Code_anbar], [Code_tahvil], [Number_car], [Price_haml], [Price_bargiri], [Price_takhlye], [Price_other], [Takhfif], [PriceKilo], [KasriKilo], [NumBaskool], [PrintEn], [Kharid], [SanadFlag], [DaraiFlag]) VALUES (@Code_resid, @Date_resid, @Type_resid, @Code_fro, @Code_faktor, @Date_faktor, @Code_driver, @Code_anbar, @Code_tahvil, @Number_car, @Price_haml, @Price_bargiri, @Price_takhlye, @Price_other, @Takhfif, @PriceKilo, @KasriKilo, @NumBaskool, @PrintEn, @Kharid, @SanadFlag, @DaraiFlag);
+SELECT Code_resid, Date_resid, Type_resid, Code_fro, Code_faktor, Date_faktor, Code_driver, Code_anbar, Code_tahvil, Number_car, Price_haml, Price_bargiri, Price_takhlye, Price_other, Takhfif, PriceKilo, KasriKilo, NumBaskool, PrintEn, Kharid, SanadFlag, DaraiFlag FROM Tbl_Resid WHERE (Code_resid = @Code_resid)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Code_resid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Date_resid" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Date_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Type_resid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Type_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Code_fro" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_fro" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Code_faktor" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Code_faktor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Date_faktor" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Date_faktor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Code_driver" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_driver" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Code_anbar" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_anbar" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Code_tahvil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_tahvil" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Number_car" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Number_car" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Price_haml" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Price_haml" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Price_bargiri" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Price_bargiri" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Price_takhlye" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Price_takhlye" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Price_other" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Price_other" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Takhfif" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Takhfif" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@PriceKilo" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PriceKilo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@KasriKilo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="KasriKilo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@NumBaskool" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NumBaskool" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@PrintEn" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="PrintEn" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@Kharid" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="Kharid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@SanadFlag" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SanadFlag" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@DaraiFlag" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="DaraiFlag" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT *
+FROM     Tbl_Resid
+WHERE  (Code_fro &gt; 1) AND (Date_resid BETWEEN @D1 AND @D2) </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="D1" ColumnName="Date_resid" DataSourceName="db_Producer.dbo.Tbl_Resid" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@D1" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="Date_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="D2" ColumnName="Date_resid" DataSourceName="db_Producer.dbo.Tbl_Resid" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@D2" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="Date_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Tbl_Resid] SET [Code_resid] = @Code_resid, [Date_resid] = @Date_resid, [Type_resid] = @Type_resid, [Code_fro] = @Code_fro, [Code_faktor] = @Code_faktor, [Date_faktor] = @Date_faktor, [Code_driver] = @Code_driver, [Code_anbar] = @Code_anbar, [Code_tahvil] = @Code_tahvil, [Number_car] = @Number_car, [Price_haml] = @Price_haml, [Price_bargiri] = @Price_bargiri, [Price_takhlye] = @Price_takhlye, [Price_other] = @Price_other, [Takhfif] = @Takhfif, [PriceKilo] = @PriceKilo, [KasriKilo] = @KasriKilo, [NumBaskool] = @NumBaskool, [PrintEn] = @PrintEn, [Kharid] = @Kharid, [SanadFlag] = @SanadFlag, [DaraiFlag] = @DaraiFlag WHERE (([Code_resid] = @Original_Code_resid) AND ((@IsNull_Date_resid = 1 AND [Date_resid] IS NULL) OR ([Date_resid] = @Original_Date_resid)) AND ((@IsNull_Type_resid = 1 AND [Type_resid] IS NULL) OR ([Type_resid] = @Original_Type_resid)) AND ((@IsNull_Code_fro = 1 AND [Code_fro] IS NULL) OR ([Code_fro] = @Original_Code_fro)) AND ((@IsNull_Code_faktor = 1 AND [Code_faktor] IS NULL) OR ([Code_faktor] = @Original_Code_faktor)) AND ((@IsNull_Date_faktor = 1 AND [Date_faktor] IS NULL) OR ([Date_faktor] = @Original_Date_faktor)) AND ((@IsNull_Code_driver = 1 AND [Code_driver] IS NULL) OR ([Code_driver] = @Original_Code_driver)) AND ((@IsNull_Code_anbar = 1 AND [Code_anbar] IS NULL) OR ([Code_anbar] = @Original_Code_anbar)) AND ((@IsNull_Code_tahvil = 1 AND [Code_tahvil] IS NULL) OR ([Code_tahvil] = @Original_Code_tahvil)) AND ((@IsNull_Number_car = 1 AND [Number_car] IS NULL) OR ([Number_car] = @Original_Number_car)) AND ((@IsNull_Price_haml = 1 AND [Price_haml] IS NULL) OR ([Price_haml] = @Original_Price_haml)) AND ((@IsNull_Price_bargiri = 1 AND [Price_bargiri] IS NULL) OR ([Price_bargiri] = @Original_Price_bargiri)) AND ((@IsNull_Price_takhlye = 1 AND [Price_takhlye] IS NULL) OR ([Price_takhlye] = @Original_Price_takhlye)) AND ((@IsNull_Price_other = 1 AND [Price_other] IS NULL) OR ([Price_other] = @Original_Price_other)) AND ((@IsNull_Takhfif = 1 AND [Takhfif] IS NULL) OR ([Takhfif] = @Original_Takhfif)) AND ((@IsNull_PriceKilo = 1 AND [PriceKilo] IS NULL) OR ([PriceKilo] = @Original_PriceKilo)) AND ((@IsNull_KasriKilo = 1 AND [KasriKilo] IS NULL) OR ([KasriKilo] = @Original_KasriKilo)) AND ((@IsNull_NumBaskool = 1 AND [NumBaskool] IS NULL) OR ([NumBaskool] = @Original_NumBaskool)) AND ((@IsNull_PrintEn = 1 AND [PrintEn] IS NULL) OR ([PrintEn] = @Original_PrintEn)) AND ((@IsNull_Kharid = 1 AND [Kharid] IS NULL) OR ([Kharid] = @Original_Kharid)) AND ([SanadFlag] = @Original_SanadFlag) AND ([DaraiFlag] = @Original_DaraiFlag));
+SELECT Code_resid, Date_resid, Type_resid, Code_fro, Code_faktor, Date_faktor, Code_driver, Code_anbar, Code_tahvil, Number_car, Price_haml, Price_bargiri, Price_takhlye, Price_other, Takhfif, PriceKilo, KasriKilo, NumBaskool, PrintEn, Kharid, SanadFlag, DaraiFlag FROM Tbl_Resid WHERE (Code_resid = @Code_resid)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Code_resid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Date_resid" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Date_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Type_resid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Type_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Code_fro" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_fro" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Code_faktor" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Code_faktor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Date_faktor" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Date_faktor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Code_driver" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_driver" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Code_anbar" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_anbar" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Code_tahvil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_tahvil" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Number_car" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Number_car" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Price_haml" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Price_haml" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Price_bargiri" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Price_bargiri" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Price_takhlye" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Price_takhlye" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Price_other" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Price_other" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Takhfif" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Takhfif" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@PriceKilo" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PriceKilo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@KasriKilo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="KasriKilo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@NumBaskool" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NumBaskool" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@PrintEn" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="PrintEn" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@Kharid" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="Kharid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@SanadFlag" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SanadFlag" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@DaraiFlag" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="DaraiFlag" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Code_resid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_resid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Date_resid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Date_resid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Date_resid" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Date_resid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Type_resid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Type_resid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Type_resid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Type_resid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Code_fro" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_fro" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Code_fro" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_fro" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Code_faktor" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_faktor" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Code_faktor" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Code_faktor" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Date_faktor" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Date_faktor" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Date_faktor" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Date_faktor" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Code_driver" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_driver" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Code_driver" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_driver" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Code_anbar" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_anbar" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Code_anbar" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_anbar" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Code_tahvil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_tahvil" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Code_tahvil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_tahvil" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Number_car" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Number_car" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Number_car" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Number_car" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price_haml" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price_haml" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Price_haml" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Price_haml" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price_bargiri" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price_bargiri" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Price_bargiri" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Price_bargiri" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price_takhlye" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price_takhlye" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Price_takhlye" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Price_takhlye" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price_other" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price_other" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Price_other" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Price_other" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Takhfif" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Takhfif" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Takhfif" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Takhfif" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PriceKilo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PriceKilo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_PriceKilo" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PriceKilo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_KasriKilo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="KasriKilo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_KasriKilo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="KasriKilo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_NumBaskool" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NumBaskool" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_NumBaskool" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NumBaskool" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PrintEn" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PrintEn" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_PrintEn" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="PrintEn" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Kharid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Kharid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@Original_Kharid" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="Kharid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_SanadFlag" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="SanadFlag" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_DaraiFlag" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="DaraiFlag" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Code_resid" DataSetColumn="Code_resid" />
+              <Mapping SourceColumn="Date_resid" DataSetColumn="Date_resid" />
+              <Mapping SourceColumn="Type_resid" DataSetColumn="Type_resid" />
+              <Mapping SourceColumn="Code_fro" DataSetColumn="Code_fro" />
+              <Mapping SourceColumn="Code_faktor" DataSetColumn="Code_faktor" />
+              <Mapping SourceColumn="Date_faktor" DataSetColumn="Date_faktor" />
+              <Mapping SourceColumn="Code_driver" DataSetColumn="Code_driver" />
+              <Mapping SourceColumn="Code_anbar" DataSetColumn="Code_anbar" />
+              <Mapping SourceColumn="Code_tahvil" DataSetColumn="Code_tahvil" />
+              <Mapping SourceColumn="Number_car" DataSetColumn="Number_car" />
+              <Mapping SourceColumn="Price_haml" DataSetColumn="Price_haml" />
+              <Mapping SourceColumn="Price_bargiri" DataSetColumn="Price_bargiri" />
+              <Mapping SourceColumn="Price_takhlye" DataSetColumn="Price_takhlye" />
+              <Mapping SourceColumn="Price_other" DataSetColumn="Price_other" />
+              <Mapping SourceColumn="Takhfif" DataSetColumn="Takhfif" />
+              <Mapping SourceColumn="PriceKilo" DataSetColumn="PriceKilo" />
+              <Mapping SourceColumn="KasriKilo" DataSetColumn="KasriKilo" />
+              <Mapping SourceColumn="NumBaskool" DataSetColumn="NumBaskool" />
+              <Mapping SourceColumn="Kharid" DataSetColumn="Kharid" />
+              <Mapping SourceColumn="PrintEn" DataSetColumn="PrintEn" />
+              <Mapping SourceColumn="SanadFlag" DataSetColumn="SanadFlag" />
+              <Mapping SourceColumn="DaraiFlag" DataSetColumn="DaraiFlag" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.Tbl_Resid" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByMojodi" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByMojodi" GeneratorSourceName="FillByMojodi" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByMojodi">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Code_anbar, Code_driver, Code_faktor, Code_fro, Code_resid, Code_tahvil, DaraiFlag, Date_faktor, Date_resid, KasriKilo, Kharid, NumBaskool, Number_car, PriceKilo, Price_bargiri, Price_haml, Price_other, Price_takhlye, PrintEn, SanadFlag, Takhfif, Type_resid FROM Tbl_Resid WHERE (Code_fro = 1) AND (Date_resid BETWEEN @D1 AND @D2)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="D1" ColumnName="Date_resid" DataSourceName="db_Producer.dbo.Tbl_Resid" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@D1" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="Date_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="D2" ColumnName="Date_resid" DataSourceName="db_Producer.dbo.Tbl_Resid" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@D2" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="Date_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.MaxID" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="MaxID" Modifier="Public" Name="MaxID" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="MaxID">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.MaxID</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Tbl_ResidRizTA" GeneratorDataComponentClassName="Tbl_ResidRizTA" Name="Tbl_ResidRiz" UserDataComponentName="Tbl_ResidRizTA">
+            <MainSource>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.Tbl_ResidRiz" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Tbl_ResidRiz] WHERE (([Code_rz] = @Original_Code_rz) AND ((@IsNull_Code_resid = 1 AND [Code_resid] IS NULL) OR ([Code_resid] = @Original_Code_resid)) AND ((@IsNull_Code_matter = 1 AND [Code_matter] IS NULL) OR ([Code_matter] = @Original_Code_matter)) AND ((@IsNull_Code_vahed = 1 AND [Code_vahed] IS NULL) OR ([Code_vahed] = @Original_Code_vahed)) AND ((@IsNull_Zarfiat_vahed = 1 AND [Zarfiat_vahed] IS NULL) OR ([Zarfiat_vahed] = @Original_Zarfiat_vahed)) AND ((@IsNull_Tedad = 1 AND [Tedad] IS NULL) OR ([Tedad] = @Original_Tedad)) AND ((@IsNull_Price_vahed = 1 AND [Price_vahed] IS NULL) OR ([Price_vahed] = @Original_Price_vahed)) AND ((@IsNull_Price_tamam = 1 AND [Price_tamam] IS NULL) OR ([Price_tamam] = @Original_Price_tamam)) AND ((@IsNull_Darsad_oft = 1 AND [Darsad_oft] IS NULL) OR ([Darsad_oft] = @Original_Darsad_oft)) AND ((@IsNull_vaznPor = 1 AND [vaznPor] IS NULL) OR ([vaznPor] = @Original_vaznPor)) AND ((@IsNull_vaznKhali = 1 AND [vaznKhali] IS NULL) OR ([vaznKhali] = @Original_vaznKhali)) AND ((@IsNull_Tax = 1 AND [Tax] IS NULL) OR ([Tax] = @Original_Tax)) AND ((@IsNull_Takhfif = 1 AND [Takhfif] IS NULL) OR ([Takhfif] = @Original_Takhfif)) AND ((@IsNull_PriceORG = 1 AND [PriceORG] IS NULL) OR ([PriceORG] = @Original_PriceORG)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Code_rz" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_rz" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Code_resid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_resid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Code_resid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_resid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Code_matter" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_matter" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Code_matter" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_matter" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Code_vahed" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_vahed" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Code_vahed" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_vahed" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Zarfiat_vahed" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Zarfiat_vahed" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Zarfiat_vahed" Precision="8" ProviderType="Decimal" Scale="1" Size="0" SourceColumn="Zarfiat_vahed" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Tedad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tedad" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Tedad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tedad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price_vahed" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price_vahed" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Price_vahed" Precision="15" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Price_vahed" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price_tamam" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price_tamam" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Price_tamam" Precision="15" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Price_tamam" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Darsad_oft" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Darsad_oft" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Darsad_oft" Precision="3" ProviderType="Decimal" Scale="1" Size="0" SourceColumn="Darsad_oft" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_vaznPor" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="vaznPor" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_vaznPor" Precision="15" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="vaznPor" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_vaznKhali" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="vaznKhali" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_vaznKhali" Precision="15" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="vaznKhali" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Tax" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tax" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Tax" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Tax" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Takhfif" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Takhfif" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Takhfif" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Takhfif" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PriceORG" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PriceORG" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_PriceORG" Precision="15" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PriceORG" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Tbl_ResidRiz] ([Code_resid], [Code_matter], [Code_vahed], [Zarfiat_vahed], [Tedad], [Price_vahed], [Price_tamam], [Darsad_oft], [vaznPor], [vaznKhali], [Tax], [Takhfif], [PriceORG]) VALUES (@Code_resid, @Code_matter, @Code_vahed, @Zarfiat_vahed, @Tedad, @Price_vahed, @Price_tamam, @Darsad_oft, @vaznPor, @vaznKhali, @Tax, @Takhfif, @PriceORG);
+SELECT Code_rz, Code_resid, Code_matter, Code_vahed, Zarfiat_vahed, Tedad, Price_vahed, Price_tamam, Darsad_oft, vaznPor, vaznKhali, Tax, Takhfif, PriceORG FROM Tbl_ResidRiz WHERE (Code_rz = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Code_resid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Code_matter" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_matter" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Code_vahed" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_vahed" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Zarfiat_vahed" Precision="8" ProviderType="Decimal" Scale="1" Size="0" SourceColumn="Zarfiat_vahed" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Tedad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tedad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Price_vahed" Precision="15" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Price_vahed" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Price_tamam" Precision="15" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Price_tamam" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Darsad_oft" Precision="3" ProviderType="Decimal" Scale="1" Size="0" SourceColumn="Darsad_oft" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@vaznPor" Precision="15" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="vaznPor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@vaznKhali" Precision="15" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="vaznKhali" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Tax" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Tax" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Takhfif" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Takhfif" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@PriceORG" Precision="15" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PriceORG" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Code_rz, Code_resid, Code_matter, Code_vahed, Zarfiat_vahed, Tedad, Price_vahed, Price_tamam, Darsad_oft, vaznPor, vaznKhali, Tax, Takhfif, PriceORG
+FROM     Tbl_ResidRiz</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Tbl_ResidRiz] SET [Code_resid] = @Code_resid, [Code_matter] = @Code_matter, [Code_vahed] = @Code_vahed, [Zarfiat_vahed] = @Zarfiat_vahed, [Tedad] = @Tedad, [Price_vahed] = @Price_vahed, [Price_tamam] = @Price_tamam, [Darsad_oft] = @Darsad_oft, [vaznPor] = @vaznPor, [vaznKhali] = @vaznKhali, [Tax] = @Tax, [Takhfif] = @Takhfif, [PriceORG] = @PriceORG WHERE (([Code_rz] = @Original_Code_rz) AND ((@IsNull_Code_resid = 1 AND [Code_resid] IS NULL) OR ([Code_resid] = @Original_Code_resid)) AND ((@IsNull_Code_matter = 1 AND [Code_matter] IS NULL) OR ([Code_matter] = @Original_Code_matter)) AND ((@IsNull_Code_vahed = 1 AND [Code_vahed] IS NULL) OR ([Code_vahed] = @Original_Code_vahed)) AND ((@IsNull_Zarfiat_vahed = 1 AND [Zarfiat_vahed] IS NULL) OR ([Zarfiat_vahed] = @Original_Zarfiat_vahed)) AND ((@IsNull_Tedad = 1 AND [Tedad] IS NULL) OR ([Tedad] = @Original_Tedad)) AND ((@IsNull_Price_vahed = 1 AND [Price_vahed] IS NULL) OR ([Price_vahed] = @Original_Price_vahed)) AND ((@IsNull_Price_tamam = 1 AND [Price_tamam] IS NULL) OR ([Price_tamam] = @Original_Price_tamam)) AND ((@IsNull_Darsad_oft = 1 AND [Darsad_oft] IS NULL) OR ([Darsad_oft] = @Original_Darsad_oft)) AND ((@IsNull_vaznPor = 1 AND [vaznPor] IS NULL) OR ([vaznPor] = @Original_vaznPor)) AND ((@IsNull_vaznKhali = 1 AND [vaznKhali] IS NULL) OR ([vaznKhali] = @Original_vaznKhali)) AND ((@IsNull_Tax = 1 AND [Tax] IS NULL) OR ([Tax] = @Original_Tax)) AND ((@IsNull_Takhfif = 1 AND [Takhfif] IS NULL) OR ([Takhfif] = @Original_Takhfif)) AND ((@IsNull_PriceORG = 1 AND [PriceORG] IS NULL) OR ([PriceORG] = @Original_PriceORG)));
+SELECT Code_rz, Code_resid, Code_matter, Code_vahed, Zarfiat_vahed, Tedad, Price_vahed, Price_tamam, Darsad_oft, vaznPor, vaznKhali, Tax, Takhfif, PriceORG FROM Tbl_ResidRiz WHERE (Code_rz = @Code_rz)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Code_resid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Code_matter" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_matter" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Code_vahed" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_vahed" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Zarfiat_vahed" Precision="8" ProviderType="Decimal" Scale="1" Size="0" SourceColumn="Zarfiat_vahed" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Tedad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tedad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Price_vahed" Precision="15" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Price_vahed" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Price_tamam" Precision="15" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Price_tamam" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Darsad_oft" Precision="3" ProviderType="Decimal" Scale="1" Size="0" SourceColumn="Darsad_oft" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@vaznPor" Precision="15" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="vaznPor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@vaznKhali" Precision="15" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="vaznKhali" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Tax" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Tax" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Takhfif" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Takhfif" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@PriceORG" Precision="15" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PriceORG" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Code_rz" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_rz" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Code_resid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_resid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Code_resid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_resid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Code_matter" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_matter" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Code_matter" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_matter" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Code_vahed" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_vahed" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Code_vahed" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Code_vahed" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Zarfiat_vahed" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Zarfiat_vahed" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Zarfiat_vahed" Precision="8" ProviderType="Decimal" Scale="1" Size="0" SourceColumn="Zarfiat_vahed" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Tedad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tedad" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Tedad" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tedad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price_vahed" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price_vahed" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Price_vahed" Precision="15" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Price_vahed" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Price_tamam" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Price_tamam" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Price_tamam" Precision="15" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Price_tamam" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Darsad_oft" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Darsad_oft" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Darsad_oft" Precision="3" ProviderType="Decimal" Scale="1" Size="0" SourceColumn="Darsad_oft" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_vaznPor" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="vaznPor" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_vaznPor" Precision="15" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="vaznPor" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_vaznKhali" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="vaznKhali" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_vaznKhali" Precision="15" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="vaznKhali" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Tax" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tax" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Tax" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Tax" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Takhfif" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Takhfif" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Takhfif" Precision="10" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="Takhfif" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PriceORG" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PriceORG" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_PriceORG" Precision="15" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="PriceORG" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Code_rz" ColumnName="Code_rz" DataSourceName="db_Producer.dbo.Tbl_ResidRiz" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Code_rz" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Code_rz" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Code_rz" DataSetColumn="Code_rz" />
+              <Mapping SourceColumn="Code_resid" DataSetColumn="Code_resid" />
+              <Mapping SourceColumn="Code_matter" DataSetColumn="Code_matter" />
+              <Mapping SourceColumn="Code_vahed" DataSetColumn="Code_vahed" />
+              <Mapping SourceColumn="Zarfiat_vahed" DataSetColumn="Zarfiat_vahed" />
+              <Mapping SourceColumn="Tedad" DataSetColumn="Tedad" />
+              <Mapping SourceColumn="Darsad_oft" DataSetColumn="Darsad_oft" />
+              <Mapping SourceColumn="vaznPor" DataSetColumn="vaznPor" />
+              <Mapping SourceColumn="vaznKhali" DataSetColumn="vaznKhali" />
+              <Mapping SourceColumn="Tax" DataSetColumn="Tax" />
+              <Mapping SourceColumn="Price_tamam" DataSetColumn="Price_tamam" />
+              <Mapping SourceColumn="Price_vahed" DataSetColumn="Price_vahed" />
+              <Mapping SourceColumn="Takhfif" DataSetColumn="Takhfif" />
+              <Mapping SourceColumn="PriceORG" DataSetColumn="PriceORG" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.Tbl_ResidRiz" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByCode" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByCode" GeneratorSourceName="FillByCode" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByCode">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Code_matter, Code_resid, Code_rz, Code_vahed, Darsad_oft, PriceORG, Price_tamam, Price_vahed, Takhfif, Tax, Tedad, Zarfiat_vahed, vaznKhali, vaznPor FROM Tbl_ResidRiz WHERE (Code_resid = @Code)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Code" ColumnName="Code_resid" DataSourceName="db_Producer.dbo.Tbl_ResidRiz" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Code" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Code_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_ResidTA" GeneratorDataComponentClassName="View_ResidTA" Name="View_Resid" UserDataComponentName="View_ResidTA">
+            <MainSource>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.View_Resid" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Code_resid, name_fro, Driver, Date_resid, Name_anbar, Name_tahvil, Number_car, Price_haml, Price_bargiri, Price_takhlye, Price_other, Takhfif, Code_faktor, Date_faktor, Code_fro, DaraiFlag, Pay
+FROM     View_Resid</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Code_resid" DataSetColumn="Code_resid" />
+              <Mapping SourceColumn="name_fro" DataSetColumn="name_fro" />
+              <Mapping SourceColumn="Driver" DataSetColumn="Driver" />
+              <Mapping SourceColumn="Date_resid" DataSetColumn="Date_resid" />
+              <Mapping SourceColumn="Name_anbar" DataSetColumn="Name_anbar" />
+              <Mapping SourceColumn="Name_tahvil" DataSetColumn="Name_tahvil" />
+              <Mapping SourceColumn="Number_car" DataSetColumn="Number_car" />
+              <Mapping SourceColumn="Price_haml" DataSetColumn="Price_haml" />
+              <Mapping SourceColumn="Price_bargiri" DataSetColumn="Price_bargiri" />
+              <Mapping SourceColumn="Price_takhlye" DataSetColumn="Price_takhlye" />
+              <Mapping SourceColumn="Price_other" DataSetColumn="Price_other" />
+              <Mapping SourceColumn="Takhfif" DataSetColumn="Takhfif" />
+              <Mapping SourceColumn="Code_faktor" DataSetColumn="Code_faktor" />
+              <Mapping SourceColumn="Date_faktor" DataSetColumn="Date_faktor" />
+              <Mapping SourceColumn="Code_fro" DataSetColumn="Code_fro" />
+              <Mapping SourceColumn="DaraiFlag" DataSetColumn="DaraiFlag" />
+              <Mapping SourceColumn="Pay" DataSetColumn="Pay" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.View_Resid" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByCode" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByCode" GeneratorSourceName="FillByCode" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByCode">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Code_faktor, Code_fro, Code_resid, DaraiFlag, Date_faktor, Date_resid, Driver, Name_anbar, Name_tahvil, Number_car, Pay, Price_bargiri, Price_haml, Price_other, Price_takhlye, Takhfif, name_fro FROM View_Resid WHERE (Code_resid = @Code)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Code" ColumnName="Code_resid" DataSourceName="db_Producer.dbo.View_Resid" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Code" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Code_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_ResidrRizTA" GeneratorDataComponentClassName="View_ResidrRizTA" Name="View_ResidrRiz" UserDataComponentName="View_ResidrRizTA">
+            <MainSource>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.View_ResidrRiz" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        View_ResidrRiz.*
+FROM            View_ResidrRiz</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Code_rz" DataSetColumn="Code_rz" />
+              <Mapping SourceColumn="Code_resid" DataSetColumn="Code_resid" />
+              <Mapping SourceColumn="Name_matter" DataSetColumn="Name_matter" />
+              <Mapping SourceColumn="vaznResid" DataSetColumn="vaznResid" />
+              <Mapping SourceColumn="vaznKhales" DataSetColumn="vaznKhales" />
+              <Mapping SourceColumn="VaznKasr" DataSetColumn="VaznKasr" />
+              <Mapping SourceColumn="Price_tamam" DataSetColumn="Price_tamam" />
+              <Mapping SourceColumn="Price_vahed" DataSetColumn="Price_vahed" />
+              <Mapping SourceColumn="Darsad_oft" DataSetColumn="Darsad_oft" />
+              <Mapping SourceColumn="Code_matter" DataSetColumn="Code_matter" />
+              <Mapping SourceColumn="Takhfif" DataSetColumn="Takhfif" />
+              <Mapping SourceColumn="Tax" DataSetColumn="Tax" />
+              <Mapping SourceColumn="PriceORG" DataSetColumn="PriceORG" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.View_ResidrRiz" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByCodeResid" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByCodeResid" GeneratorSourceName="FillByCodeResid" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByCodeResid">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Code_matter, Code_resid, Code_rz, Darsad_oft, Name_matter, PriceORG, Price_tamam, Price_vahed, Takhfif, Tax, VaznKasr, vaznKhales, vaznResid FROM View_ResidrRiz WHERE (Code_resid = @Code)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Code" ColumnName="Code_resid" DataSourceName="db_Producer.dbo.View_ResidrRiz" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Code" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Code_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_RptResidTA" GeneratorDataComponentClassName="View_RptResidTA" Name="View_RptResid" UserDataComponentName="View_RptResidTA">
+            <MainSource>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.View_RptResid" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Code_resid, name_fro, Date_resid, Name_anbar, Code_matter, Name_matter, vaznResid, vaznKhales, VaznKasr, Price_tamam, Price_vahed, Code_fro, Number_car, Code_faktor, Price_haml, Takhfif, Tax, PhKilo, PriceORG
+FROM     View_RptResid</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Code_resid" DataSetColumn="Code_resid" />
+              <Mapping SourceColumn="name_fro" DataSetColumn="name_fro" />
+              <Mapping SourceColumn="Date_resid" DataSetColumn="Date_resid" />
+              <Mapping SourceColumn="Name_anbar" DataSetColumn="Name_anbar" />
+              <Mapping SourceColumn="Name_matter" DataSetColumn="Name_matter" />
+              <Mapping SourceColumn="vaznResid" DataSetColumn="vaznResid" />
+              <Mapping SourceColumn="vaznKhales" DataSetColumn="vaznKhales" />
+              <Mapping SourceColumn="VaznKasr" DataSetColumn="VaznKasr" />
+              <Mapping SourceColumn="Price_tamam" DataSetColumn="Price_tamam" />
+              <Mapping SourceColumn="Code_matter" DataSetColumn="Code_matter" />
+              <Mapping SourceColumn="Price_vahed" DataSetColumn="Price_vahed" />
+              <Mapping SourceColumn="Code_fro" DataSetColumn="Code_fro" />
+              <Mapping SourceColumn="Number_car" DataSetColumn="Number_car" />
+              <Mapping SourceColumn="Code_faktor" DataSetColumn="Code_faktor" />
+              <Mapping SourceColumn="Price_haml" DataSetColumn="Price_haml" />
+              <Mapping SourceColumn="Takhfif" DataSetColumn="Takhfif" />
+              <Mapping SourceColumn="Tax" DataSetColumn="Tax" />
+              <Mapping SourceColumn="PhKilo" DataSetColumn="PhKilo" />
+              <Mapping SourceColumn="PriceORG" DataSetColumn="PriceORG" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.View_RptResid" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByDate" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDate" GeneratorSourceName="FillByDate" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByDate">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Code_faktor, Code_fro, Code_matter, Code_resid, Date_resid, Name_anbar, Name_matter, Number_car, PhKilo, PriceORG, Price_haml, Price_tamam, Price_vahed, Takhfif, Tax, VaznKasr, name_fro, vaznKhales, vaznResid FROM View_RptResid WHERE (Date_resid BETWEEN @D1 AND @D2) AND (Type_resid BETWEEN @T1 AND @T2)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="D1" ColumnName="Date_resid" DataSourceName="db_Producer.dbo.View_RptResid" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@D1" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="Date_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="D2" ColumnName="Date_resid" DataSourceName="db_Producer.dbo.View_RptResid" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@D2" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="Date_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="T1" ColumnName="Type_resid" DataSourceName="db_Producer.dbo.View_RptResid" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@T1" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Type_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="T2" ColumnName="Type_resid" DataSourceName="db_Producer.dbo.View_RptResid" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@T2" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Type_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.View_RptResid" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByMatterPerson" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByMatterPerson" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillByMatterPerson">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Code_faktor, Code_fro, Code_matter, Code_resid, Date_resid, Name_anbar, Name_matter, Number_car, PhKilo, PriceORG, Price_haml, Price_tamam, Price_vahed, Takhfif, Tax, VaznKasr, name_fro, vaznKhales, vaznResid FROM View_RptResid WHERE (Date_resid BETWEEN @D1 AND @D2) AND (Code_matter BETWEEN  @Mater1 AND @Mater2 ) AND ( Code_fro BETWEEN   @CodePers1 AND @CodePers2) AND (Type_resid BETWEEN @T1 AND @T2)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="D1" ColumnName="Date_resid" DataSourceName="db_Producer.dbo.View_RptResid" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@D1" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="Date_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="D2" ColumnName="Date_resid" DataSourceName="db_Producer.dbo.View_RptResid" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@D2" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="Date_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Mater1" ColumnName="Code_matter" DataSourceName="db_Producer.dbo.View_RptResid" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Mater1" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Code_matter" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Mater2" ColumnName="Code_matter" DataSourceName="db_Producer.dbo.View_RptResid" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Mater2" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Code_matter" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="CodePers1" ColumnName="Code_fro" DataSourceName="db_Producer.dbo.View_RptResid" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@CodePers1" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Code_fro" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="CodePers2" ColumnName="Code_fro" DataSourceName="db_Producer.dbo.View_RptResid" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@CodePers2" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Code_fro" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="T1" ColumnName="Type_resid" DataSourceName="db_Producer.dbo.View_RptResid" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@T1" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Type_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="T2" ColumnName="Type_resid" DataSourceName="db_Producer.dbo.View_RptResid" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@T2" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Type_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.View_RptResid" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByMtDate" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByMtDate" GeneratorSourceName="FillByMtDate" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillByMtDate">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Code_faktor, Code_fro, Code_matter, Code_resid, Date_resid, Name_anbar, Name_matter, Number_car, PhKilo, PriceORG, Price_haml, Price_tamam, Price_vahed, Takhfif, Tax, VaznKasr, name_fro, vaznKhales, vaznResid FROM View_RptResid WHERE (Date_resid BETWEEN @D1 AND @D2) AND (Code_matter = @Mater) AND (Type_resid BETWEEN @T1 AND @T2)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="D1" ColumnName="Date_resid" DataSourceName="db_Producer.dbo.View_RptResid" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@D1" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="Date_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="D2" ColumnName="Date_resid" DataSourceName="db_Producer.dbo.View_RptResid" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@D2" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="Date_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Mater" ColumnName="Code_matter" DataSourceName="db_Producer.dbo.View_RptResid" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Mater" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Code_matter" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="T1" ColumnName="Type_resid" DataSourceName="db_Producer.dbo.View_RptResid" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@T1" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Type_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="T2" ColumnName="Type_resid" DataSourceName="db_Producer.dbo.View_RptResid" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@T2" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Type_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.View_RptResid" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByShakhsDate" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByShakhsDate" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillByShakhsDate">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Code_faktor, Code_fro, Code_matter, Code_resid, Date_resid, Name_anbar, Name_matter, Number_car, PhKilo, PriceORG, Price_haml, Price_tamam, Price_vahed, Takhfif, Tax, VaznKasr, name_fro, vaznKhales, vaznResid FROM View_RptResid WHERE (Code_fro = @CodeSh) AND (Date_resid BETWEEN @D1 AND @D2) AND (Type_resid BETWEEN @T1 AND @T2)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="CodeSh" ColumnName="Code_fro" DataSourceName="db_Producer.dbo.View_RptResid" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@CodeSh" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Code_fro" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="D1" ColumnName="Date_resid" DataSourceName="db_Producer.dbo.View_RptResid" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@D1" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="Date_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="D2" ColumnName="Date_resid" DataSourceName="db_Producer.dbo.View_RptResid" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@D2" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="Date_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="T1" ColumnName="Type_resid" DataSourceName="db_Producer.dbo.View_RptResid" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@T1" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Type_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="T2" ColumnName="Type_resid" DataSourceName="db_Producer.dbo.View_RptResid" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@T2" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Type_resid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Tbl_NoeResidTA" GeneratorDataComponentClassName="Tbl_NoeResidTA" Name="Tbl_NoeResid" UserDataComponentName="Tbl_NoeResidTA">
+            <MainSource>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.Tbl_NoeResid" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Tbl_NoeResid] ([id], [Pay]) VALUES (@id, @Pay)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Pay" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Pay" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Tbl_NoeResid.*
+FROM     Tbl_NoeResid</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="Pay" DataSetColumn="Pay" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.Tbl_NoeResid" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByKharid" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByKharid" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByKharid">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT id, Pay
+FROM     Tbl_NoeResid
+WHERE  (id &lt; 3)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_AmaniTA" GeneratorDataComponentClassName="View_AmaniTA" Name="View_Amani" UserDataComponentName="View_AmaniTA">
+            <MainSource>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.View_Amani" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT View_Amani.*
+FROM     View_Amani</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IDFtype" DataSetColumn="IDFtype" />
+              <Mapping SourceColumn="FtypeC" DataSetColumn="FtypeC" />
+              <Mapping SourceColumn="FCode" DataSetColumn="FCode" />
+              <Mapping SourceColumn="FDate" DataSetColumn="FDate" />
+              <Mapping SourceColumn="TitleMatter" DataSetColumn="TitleMatter" />
+              <Mapping SourceColumn="Code_fro" DataSetColumn="Code_fro" />
+              <Mapping SourceColumn="name_fro" DataSetColumn="name_fro" />
+              <Mapping SourceColumn="VKhorooj" DataSetColumn="VKhorooj" />
+              <Mapping SourceColumn="VVorood" DataSetColumn="VVorood" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.View_Amani" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByCode" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByCode" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByCode">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT View_Amani.*
+FROM     View_Amani
+WHERE  (FDate BETWEEN @D1 AND @D2) AND (Code_fro = @CodeFro)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="D1" ColumnName="FDate" DataSourceName="db_Producer.dbo.View_Amani" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@D1" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="FDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="D2" ColumnName="FDate" DataSourceName="db_Producer.dbo.View_Amani" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@D2" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="FDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="CodeFro" ColumnName="Code_fro" DataSourceName="db_Producer.dbo.View_Amani" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@CodeFro" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Code_fro" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConString (Settings)" DbObjectName="db_Producer.dbo.View_Amani" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByDate" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByDate" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillByDate">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT IDFtype, FtypeC, FCode, FDate, TitleMatter, Code_fro, name_fro, VKhorooj, VVorood
+FROM     View_Amani
+WHERE  (FDate BETWEEN @D1 AND @D2) </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="D1" ColumnName="FDate" DataSourceName="db_Producer.dbo.View_Amani" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@D1" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="FDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="D2" ColumnName="FDate" DataSourceName="db_Producer.dbo.View_Amani" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@D2" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="FDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="db_DataSetResid" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="db_DataSetResid" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="db_DataSetResid">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_Anbar" msprop:Generator_RowEvHandlerName="View_AnbarRowChangeEventHandler" msprop:Generator_RowDeletedName="View_AnbarRowDeleted" msprop:Generator_RowDeletingName="View_AnbarRowDeleting" msprop:Generator_RowEvArgName="View_AnbarRowChangeEvent" msprop:Generator_TablePropName="View_Anbar" msprop:Generator_RowChangedName="View_AnbarRowChanged" msprop:Generator_UserTableName="View_Anbar" msprop:Generator_RowChangingName="View_AnbarRowChanging" msprop:Generator_RowClassName="View_AnbarRow" msprop:Generator_TableClassName="View_AnbarDataTable" msprop:Generator_TableVarName="tableView_Anbar">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Code_anbar" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="Code_anbarColumn" msprop:Generator_ColumnPropNameInRow="Code_anbar" msprop:Generator_UserColumnName="Code_anbar" msprop:Generator_ColumnVarNameInTable="columnCode_anbar" type="xs:int" />
+              <xs:element name="Name_anbar" msprop:Generator_ColumnPropNameInTable="Name_anbarColumn" msprop:Generator_ColumnPropNameInRow="Name_anbar" msprop:Generator_UserColumnName="Name_anbar" msprop:Generator_ColumnVarNameInTable="columnName_anbar" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Matter" msprop:Generator_RowEvHandlerName="View_MatterRowChangeEventHandler" msprop:Generator_RowDeletedName="View_MatterRowDeleted" msprop:Generator_RowDeletingName="View_MatterRowDeleting" msprop:Generator_RowEvArgName="View_MatterRowChangeEvent" msprop:Generator_TablePropName="View_Matter" msprop:Generator_RowChangedName="View_MatterRowChanged" msprop:Generator_UserTableName="View_Matter" msprop:Generator_RowChangingName="View_MatterRowChanging" msprop:Generator_RowClassName="View_MatterRow" msprop:Generator_TableClassName="View_MatterDataTable" msprop:Generator_TableVarName="tableView_Matter">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Code_matter" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="Code_matterColumn" msprop:Generator_ColumnPropNameInRow="Code_matter" msprop:Generator_UserColumnName="Code_matter" msprop:Generator_ColumnVarNameInTable="columnCode_matter" type="xs:int" />
+              <xs:element name="Name_matter" msdata:Caption="نوع جنس" msprop:Generator_ColumnPropNameInTable="Name_matterColumn" msprop:Generator_ColumnPropNameInRow="Name_matter" msprop:Generator_UserColumnName="Name_matter" msprop:Generator_ColumnVarNameInTable="columnName_matter" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tax" msprop:Generator_ColumnPropNameInTable="TaxColumn" msprop:Generator_ColumnPropNameInRow="Tax" msprop:Generator_UserColumnName="Tax" msprop:Generator_ColumnVarNameInTable="columnTax" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Point_Stone" msprop:Generator_ColumnPropNameInTable="Point_StoneColumn" msprop:Generator_ColumnPropNameInRow="Point_Stone" msprop:Generator_UserColumnName="Point_Stone" msprop:Generator_ColumnVarNameInTable="columnPoint_Stone" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Person" msprop:Generator_RowEvHandlerName="View_PersonRowChangeEventHandler" msprop:Generator_RowDeletedName="View_PersonRowDeleted" msprop:Generator_RowDeletingName="View_PersonRowDeleting" msprop:Generator_RowEvArgName="View_PersonRowChangeEvent" msprop:Generator_TablePropName="View_Person" msprop:Generator_RowChangedName="View_PersonRowChanged" msprop:Generator_UserTableName="View_Person" msprop:Generator_RowChangingName="View_PersonRowChanging" msprop:Generator_RowClassName="View_PersonRow" msprop:Generator_TableClassName="View_PersonDataTable" msprop:Generator_TableVarName="tableView_Person">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Code_fro" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msdata:Caption="کد" msprop:Generator_ColumnPropNameInTable="Code_froColumn" msprop:Generator_ColumnPropNameInRow="Code_fro" msprop:Generator_UserColumnName="Code_fro" msprop:Generator_ColumnVarNameInTable="columnCode_fro" type="xs:int" />
+              <xs:element name="name_fro" msdata:Caption="نام" msprop:Generator_ColumnPropNameInTable="name_froColumn" msprop:Generator_ColumnPropNameInRow="name_fro" msprop:Generator_UserColumnName="name_fro" msprop:Generator_ColumnVarNameInTable="columnname_fro" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Addres" msdata:Caption="آدرس" msprop:Generator_ColumnPropNameInTable="AddresColumn" msprop:Generator_ColumnPropNameInRow="Addres" msprop:Generator_UserColumnName="Addres" msprop:Generator_ColumnVarNameInTable="columnAddres" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Tahvil" msprop:Generator_RowEvHandlerName="View_TahvilRowChangeEventHandler" msprop:Generator_RowDeletedName="View_TahvilRowDeleted" msprop:Generator_RowDeletingName="View_TahvilRowDeleting" msprop:Generator_RowEvArgName="View_TahvilRowChangeEvent" msprop:Generator_TablePropName="View_Tahvil" msprop:Generator_RowChangedName="View_TahvilRowChanged" msprop:Generator_UserTableName="View_Tahvil" msprop:Generator_RowChangingName="View_TahvilRowChanging" msprop:Generator_RowClassName="View_TahvilRow" msprop:Generator_TableClassName="View_TahvilDataTable" msprop:Generator_TableVarName="tableView_Tahvil">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Code_tahvil" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="Code_tahvilColumn" msprop:Generator_ColumnPropNameInRow="Code_tahvil" msprop:Generator_UserColumnName="Code_tahvil" msprop:Generator_ColumnVarNameInTable="columnCode_tahvil" type="xs:int" />
+              <xs:element name="Name_tahvil" msprop:Generator_ColumnPropNameInTable="Name_tahvilColumn" msprop:Generator_ColumnPropNameInRow="Name_tahvil" msprop:Generator_UserColumnName="Name_tahvil" msprop:Generator_ColumnVarNameInTable="columnName_tahvil" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Vahed" msprop:Generator_RowEvHandlerName="View_VahedRowChangeEventHandler" msprop:Generator_RowDeletedName="View_VahedRowDeleted" msprop:Generator_RowDeletingName="View_VahedRowDeleting" msprop:Generator_RowEvArgName="View_VahedRowChangeEvent" msprop:Generator_TablePropName="View_Vahed" msprop:Generator_RowChangedName="View_VahedRowChanged" msprop:Generator_UserTableName="View_Vahed" msprop:Generator_RowChangingName="View_VahedRowChanging" msprop:Generator_RowClassName="View_VahedRow" msprop:Generator_TableClassName="View_VahedDataTable" msprop:Generator_TableVarName="tableView_Vahed">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Code_vahed" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="Code_vahedColumn" msprop:Generator_ColumnPropNameInRow="Code_vahed" msprop:Generator_UserColumnName="Code_vahed" msprop:Generator_ColumnVarNameInTable="columnCode_vahed" type="xs:int" />
+              <xs:element name="Name_vahed" msprop:Generator_ColumnPropNameInTable="Name_vahedColumn" msprop:Generator_ColumnPropNameInRow="Name_vahed" msprop:Generator_UserColumnName="Name_vahed" msprop:Generator_ColumnVarNameInTable="columnName_vahed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Driver" msprop:Generator_RowEvHandlerName="View_DriverRowChangeEventHandler" msprop:Generator_RowDeletedName="View_DriverRowDeleted" msprop:Generator_RowDeletingName="View_DriverRowDeleting" msprop:Generator_RowEvArgName="View_DriverRowChangeEvent" msprop:Generator_TablePropName="View_Driver" msprop:Generator_RowChangedName="View_DriverRowChanged" msprop:Generator_UserTableName="View_Driver" msprop:Generator_RowChangingName="View_DriverRowChanging" msprop:Generator_RowClassName="View_DriverRow" msprop:Generator_TableClassName="View_DriverDataTable" msprop:Generator_TableVarName="tableView_Driver">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Code_fro" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msdata:Caption="کد" msprop:Generator_ColumnPropNameInTable="Code_froColumn" msprop:Generator_ColumnPropNameInRow="Code_fro" msprop:Generator_UserColumnName="Code_fro" msprop:Generator_ColumnVarNameInTable="columnCode_fro" type="xs:int" />
+              <xs:element name="name_fro" msdata:Caption="نام" msprop:Generator_ColumnPropNameInTable="name_froColumn" msprop:Generator_ColumnPropNameInRow="name_fro" msprop:Generator_UserColumnName="name_fro" msprop:Generator_ColumnVarNameInTable="columnname_fro" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Addres" msdata:Caption="آدرس" msprop:Generator_ColumnPropNameInTable="AddresColumn" msprop:Generator_ColumnPropNameInRow="Addres" msprop:Generator_UserColumnName="Addres" msprop:Generator_ColumnVarNameInTable="columnAddres" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Num_Car" msdata:Caption="شماره ماشین" msprop:Generator_ColumnPropNameInTable="Num_CarColumn" msprop:Generator_ColumnPropNameInRow="Num_Car" msprop:Generator_UserColumnName="Num_Car" msprop:Generator_ColumnVarNameInTable="columnNum_Car" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Code_meli" msprop:Generator_ColumnPropNameInTable="Code_meliColumn" msprop:Generator_ColumnPropNameInRow="Code_meli" msprop:Generator_UserColumnName="Code_meli" msprop:Generator_ColumnVarNameInTable="columnCode_meli" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mobile" msprop:Generator_ColumnPropNameInRow="mobile" msprop:Generator_ColumnPropNameInTable="mobileColumn" msprop:Generator_ColumnVarNameInTable="columnmobile" msprop:Generator_UserColumnName="mobile" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Tbl_Resid" msprop:Generator_RowEvHandlerName="Tbl_ResidRowChangeEventHandler" msprop:Generator_RowDeletedName="Tbl_ResidRowDeleted" msprop:Generator_RowDeletingName="Tbl_ResidRowDeleting" msprop:Generator_RowEvArgName="Tbl_ResidRowChangeEvent" msprop:Generator_TablePropName="Tbl_Resid" msprop:Generator_RowChangedName="Tbl_ResidRowChanged" msprop:Generator_UserTableName="Tbl_Resid" msprop:Generator_RowChangingName="Tbl_ResidRowChanging" msprop:Generator_RowClassName="Tbl_ResidRow" msprop:Generator_TableClassName="Tbl_ResidDataTable" msprop:Generator_TableVarName="tableTbl_Resid">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Code_resid" msprop:Generator_ColumnPropNameInTable="Code_residColumn" msprop:Generator_ColumnPropNameInRow="Code_resid" msprop:Generator_UserColumnName="Code_resid" msprop:Generator_ColumnVarNameInTable="columnCode_resid" type="xs:int" />
+              <xs:element name="Date_resid" msprop:Generator_ColumnPropNameInTable="Date_residColumn" msprop:Generator_ColumnPropNameInRow="Date_resid" msprop:Generator_UserColumnName="Date_resid" msprop:Generator_ColumnVarNameInTable="columnDate_resid" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Type_resid" msprop:Generator_ColumnPropNameInTable="Type_residColumn" msprop:Generator_ColumnPropNameInRow="Type_resid" msprop:Generator_UserColumnName="Type_resid" msprop:Generator_ColumnVarNameInTable="columnType_resid" type="xs:int" minOccurs="0" />
+              <xs:element name="Code_fro" msprop:Generator_ColumnPropNameInTable="Code_froColumn" msprop:Generator_ColumnPropNameInRow="Code_fro" msprop:Generator_UserColumnName="Code_fro" msprop:Generator_ColumnVarNameInTable="columnCode_fro" type="xs:int" minOccurs="0" />
+              <xs:element name="Code_faktor" msprop:Generator_ColumnPropNameInTable="Code_faktorColumn" msprop:Generator_ColumnPropNameInRow="Code_faktor" msprop:Generator_UserColumnName="Code_faktor" msprop:Generator_ColumnVarNameInTable="columnCode_faktor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Date_faktor" msprop:Generator_ColumnPropNameInTable="Date_faktorColumn" msprop:Generator_ColumnPropNameInRow="Date_faktor" msprop:Generator_UserColumnName="Date_faktor" msprop:Generator_ColumnVarNameInTable="columnDate_faktor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Code_driver" msprop:Generator_ColumnPropNameInTable="Code_driverColumn" msprop:Generator_ColumnPropNameInRow="Code_driver" msprop:Generator_UserColumnName="Code_driver" msprop:Generator_ColumnVarNameInTable="columnCode_driver" type="xs:int" minOccurs="0" />
+              <xs:element name="Code_anbar" msprop:Generator_ColumnPropNameInTable="Code_anbarColumn" msprop:Generator_ColumnPropNameInRow="Code_anbar" msprop:Generator_UserColumnName="Code_anbar" msprop:Generator_ColumnVarNameInTable="columnCode_anbar" type="xs:int" minOccurs="0" />
+              <xs:element name="Code_tahvil" msprop:Generator_ColumnPropNameInTable="Code_tahvilColumn" msprop:Generator_ColumnPropNameInRow="Code_tahvil" msprop:Generator_UserColumnName="Code_tahvil" msprop:Generator_ColumnVarNameInTable="columnCode_tahvil" type="xs:int" minOccurs="0" />
+              <xs:element name="Number_car" msprop:Generator_ColumnPropNameInTable="Number_carColumn" msprop:Generator_ColumnPropNameInRow="Number_car" msprop:Generator_UserColumnName="Number_car" msprop:Generator_ColumnVarNameInTable="columnNumber_car" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Price_haml" msprop:Generator_ColumnPropNameInTable="Price_hamlColumn" msprop:Generator_ColumnPropNameInRow="Price_haml" msprop:Generator_UserColumnName="Price_haml" msprop:Generator_ColumnVarNameInTable="columnPrice_haml" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="Price_bargiri" msprop:Generator_ColumnPropNameInTable="Price_bargiriColumn" msprop:Generator_ColumnPropNameInRow="Price_bargiri" msprop:Generator_UserColumnName="Price_bargiri" msprop:Generator_ColumnVarNameInTable="columnPrice_bargiri" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="Price_takhlye" msprop:Generator_ColumnPropNameInTable="Price_takhlyeColumn" msprop:Generator_ColumnPropNameInRow="Price_takhlye" msprop:Generator_UserColumnName="Price_takhlye" msprop:Generator_ColumnVarNameInTable="columnPrice_takhlye" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="Price_other" msprop:Generator_ColumnPropNameInTable="Price_otherColumn" msprop:Generator_ColumnPropNameInRow="Price_other" msprop:Generator_UserColumnName="Price_other" msprop:Generator_ColumnVarNameInTable="columnPrice_other" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="Takhfif" msprop:Generator_ColumnPropNameInTable="TakhfifColumn" msprop:Generator_ColumnPropNameInRow="Takhfif" msprop:Generator_UserColumnName="Takhfif" msprop:Generator_ColumnVarNameInTable="columnTakhfif" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="PriceKilo" msprop:Generator_ColumnPropNameInTable="PriceKiloColumn" msprop:Generator_ColumnPropNameInRow="PriceKilo" msprop:Generator_UserColumnName="PriceKilo" msprop:Generator_ColumnVarNameInTable="columnPriceKilo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="KasriKilo" msprop:Generator_ColumnPropNameInTable="KasriKiloColumn" msprop:Generator_ColumnPropNameInRow="KasriKilo" msprop:Generator_UserColumnName="KasriKilo" msprop:Generator_ColumnVarNameInTable="columnKasriKilo" type="xs:int" minOccurs="0" />
+              <xs:element name="NumBaskool" msprop:Generator_ColumnPropNameInTable="NumBaskoolColumn" msprop:Generator_ColumnPropNameInRow="NumBaskool" msprop:Generator_UserColumnName="NumBaskool" msprop:Generator_ColumnVarNameInTable="columnNumBaskool" type="xs:int" minOccurs="0" />
+              <xs:element name="Kharid" msprop:Generator_ColumnPropNameInTable="KharidColumn" msprop:Generator_ColumnPropNameInRow="Kharid" msprop:Generator_UserColumnName="Kharid" msprop:Generator_ColumnVarNameInTable="columnKharid" type="xs:unsignedByte" default="1" minOccurs="0" />
+              <xs:element name="PrintEn" msprop:Generator_ColumnPropNameInTable="PrintEnColumn" msprop:Generator_ColumnPropNameInRow="PrintEn" msprop:Generator_UserColumnName="PrintEn" msprop:Generator_ColumnVarNameInTable="columnPrintEn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SanadFlag" msprop:Generator_ColumnPropNameInTable="SanadFlagColumn" msprop:Generator_ColumnPropNameInRow="SanadFlag" msprop:Generator_UserColumnName="SanadFlag" msprop:Generator_ColumnVarNameInTable="columnSanadFlag" type="xs:boolean" default="false" />
+              <xs:element name="DaraiFlag" msprop:Generator_ColumnPropNameInTable="DaraiFlagColumn" msprop:Generator_ColumnPropNameInRow="DaraiFlag" msprop:Generator_UserColumnName="DaraiFlag" msprop:Generator_ColumnVarNameInTable="columnDaraiFlag" type="xs:boolean" default="false" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Tbl_ResidRiz" msprop:Generator_RowEvHandlerName="Tbl_ResidRizRowChangeEventHandler" msprop:Generator_RowDeletedName="Tbl_ResidRizRowDeleted" msprop:Generator_RowDeletingName="Tbl_ResidRizRowDeleting" msprop:Generator_RowEvArgName="Tbl_ResidRizRowChangeEvent" msprop:Generator_TablePropName="Tbl_ResidRiz" msprop:Generator_RowChangedName="Tbl_ResidRizRowChanged" msprop:Generator_UserTableName="Tbl_ResidRiz" msprop:Generator_RowChangingName="Tbl_ResidRizRowChanging" msprop:Generator_RowClassName="Tbl_ResidRizRow" msprop:Generator_TableClassName="Tbl_ResidRizDataTable" msprop:Generator_TableVarName="tableTbl_ResidRiz">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Code_rz" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="Code_rzColumn" msprop:Generator_ColumnPropNameInRow="Code_rz" msprop:Generator_UserColumnName="Code_rz" msprop:Generator_ColumnVarNameInTable="columnCode_rz" type="xs:int" />
+              <xs:element name="Code_resid" msprop:Generator_ColumnPropNameInTable="Code_residColumn" msprop:Generator_ColumnPropNameInRow="Code_resid" msprop:Generator_UserColumnName="Code_resid" msprop:Generator_ColumnVarNameInTable="columnCode_resid" type="xs:int" minOccurs="0" />
+              <xs:element name="Code_matter" msprop:Generator_ColumnPropNameInTable="Code_matterColumn" msprop:Generator_ColumnPropNameInRow="Code_matter" msprop:Generator_UserColumnName="Code_matter" msprop:Generator_ColumnVarNameInTable="columnCode_matter" type="xs:int" minOccurs="0" />
+              <xs:element name="Code_vahed" msprop:Generator_ColumnPropNameInTable="Code_vahedColumn" msprop:Generator_ColumnPropNameInRow="Code_vahed" msprop:Generator_UserColumnName="Code_vahed" msprop:Generator_ColumnVarNameInTable="columnCode_vahed" type="xs:int" minOccurs="0" />
+              <xs:element name="Zarfiat_vahed" msprop:Generator_ColumnPropNameInTable="Zarfiat_vahedColumn" msprop:Generator_ColumnPropNameInRow="Zarfiat_vahed" msprop:Generator_UserColumnName="Zarfiat_vahed" msprop:Generator_ColumnVarNameInTable="columnZarfiat_vahed" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Tedad" msprop:Generator_ColumnPropNameInTable="TedadColumn" msprop:Generator_ColumnPropNameInRow="Tedad" msprop:Generator_UserColumnName="Tedad" msprop:Generator_ColumnVarNameInTable="columnTedad" type="xs:int" default="1" minOccurs="0" />
+              <xs:element name="Darsad_oft" msprop:Generator_ColumnPropNameInTable="Darsad_oftColumn" msprop:Generator_ColumnPropNameInRow="Darsad_oft" msprop:Generator_UserColumnName="Darsad_oft" msprop:Generator_ColumnVarNameInTable="columnDarsad_oft" type="xs:decimal" default="1" minOccurs="0" />
+              <xs:element name="vaznPor" msprop:Generator_ColumnPropNameInTable="vaznPorColumn" msprop:Generator_ColumnPropNameInRow="vaznPor" msprop:Generator_UserColumnName="vaznPor" msprop:Generator_ColumnVarNameInTable="columnvaznPor" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="vaznKhali" msprop:Generator_ColumnPropNameInTable="vaznKhaliColumn" msprop:Generator_ColumnPropNameInRow="vaznKhali" msprop:Generator_UserColumnName="vaznKhali" msprop:Generator_ColumnVarNameInTable="columnvaznKhali" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="Tax" msprop:Generator_ColumnPropNameInTable="TaxColumn" msprop:Generator_ColumnPropNameInRow="Tax" msprop:Generator_UserColumnName="Tax" msprop:Generator_ColumnVarNameInTable="columnTax" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="Price_tamam" msprop:Generator_ColumnPropNameInTable="Price_tamamColumn" msprop:Generator_ColumnPropNameInRow="Price_tamam" msprop:Generator_UserColumnName="Price_tamam" msprop:Generator_ColumnVarNameInTable="columnPrice_tamam" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Price_vahed" msprop:Generator_ColumnPropNameInTable="Price_vahedColumn" msprop:Generator_ColumnPropNameInRow="Price_vahed" msprop:Generator_UserColumnName="Price_vahed" msprop:Generator_ColumnVarNameInTable="columnPrice_vahed" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Takhfif" msprop:Generator_ColumnPropNameInTable="TakhfifColumn" msprop:Generator_ColumnPropNameInRow="Takhfif" msprop:Generator_UserColumnName="Takhfif" msprop:Generator_ColumnVarNameInTable="columnTakhfif" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="PriceORG" msprop:Generator_ColumnPropNameInTable="PriceORGColumn" msprop:Generator_ColumnPropNameInRow="PriceORG" msprop:Generator_UserColumnName="PriceORG" msprop:Generator_ColumnVarNameInTable="columnPriceORG" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Resid" msprop:Generator_RowEvHandlerName="View_ResidRowChangeEventHandler" msprop:Generator_RowDeletedName="View_ResidRowDeleted" msprop:Generator_RowDeletingName="View_ResidRowDeleting" msprop:Generator_RowEvArgName="View_ResidRowChangeEvent" msprop:Generator_TablePropName="View_Resid" msprop:Generator_RowChangedName="View_ResidRowChanged" msprop:Generator_UserTableName="View_Resid" msprop:Generator_RowChangingName="View_ResidRowChanging" msprop:Generator_RowClassName="View_ResidRow" msprop:Generator_TableClassName="View_ResidDataTable" msprop:Generator_TableVarName="tableView_Resid">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Code_resid" msprop:Generator_ColumnPropNameInTable="Code_residColumn" msprop:Generator_ColumnPropNameInRow="Code_resid" msprop:Generator_UserColumnName="Code_resid" msprop:Generator_ColumnVarNameInTable="columnCode_resid" type="xs:int" />
+              <xs:element name="name_fro" msprop:Generator_ColumnPropNameInTable="name_froColumn" msprop:Generator_ColumnPropNameInRow="name_fro" msprop:Generator_UserColumnName="name_fro" msprop:Generator_ColumnVarNameInTable="columnname_fro" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Driver" msprop:Generator_ColumnPropNameInTable="DriverColumn" msprop:Generator_ColumnPropNameInRow="Driver" msprop:Generator_UserColumnName="Driver" msprop:Generator_ColumnVarNameInTable="columnDriver" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Date_resid" msprop:Generator_ColumnPropNameInTable="Date_residColumn" msprop:Generator_ColumnPropNameInRow="Date_resid" msprop:Generator_UserColumnName="Date_resid" msprop:Generator_ColumnVarNameInTable="columnDate_resid" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name_anbar" msprop:Generator_ColumnPropNameInTable="Name_anbarColumn" msprop:Generator_ColumnPropNameInRow="Name_anbar" msprop:Generator_UserColumnName="Name_anbar" msprop:Generator_ColumnVarNameInTable="columnName_anbar" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name_tahvil" msprop:Generator_ColumnPropNameInTable="Name_tahvilColumn" msprop:Generator_ColumnPropNameInRow="Name_tahvil" msprop:Generator_UserColumnName="Name_tahvil" msprop:Generator_ColumnVarNameInTable="columnName_tahvil" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Number_car" msprop:Generator_ColumnPropNameInTable="Number_carColumn" msprop:Generator_ColumnPropNameInRow="Number_car" msprop:Generator_UserColumnName="Number_car" msprop:Generator_ColumnVarNameInTable="columnNumber_car" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Price_haml" msprop:Generator_ColumnPropNameInTable="Price_hamlColumn" msprop:Generator_ColumnPropNameInRow="Price_haml" msprop:Generator_UserColumnName="Price_haml" msprop:Generator_ColumnVarNameInTable="columnPrice_haml" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Price_bargiri" msprop:Generator_ColumnPropNameInTable="Price_bargiriColumn" msprop:Generator_ColumnPropNameInRow="Price_bargiri" msprop:Generator_UserColumnName="Price_bargiri" msprop:Generator_ColumnVarNameInTable="columnPrice_bargiri" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Price_takhlye" msprop:Generator_ColumnPropNameInTable="Price_takhlyeColumn" msprop:Generator_ColumnPropNameInRow="Price_takhlye" msprop:Generator_UserColumnName="Price_takhlye" msprop:Generator_ColumnVarNameInTable="columnPrice_takhlye" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Price_other" msprop:Generator_ColumnPropNameInTable="Price_otherColumn" msprop:Generator_ColumnPropNameInRow="Price_other" msprop:Generator_UserColumnName="Price_other" msprop:Generator_ColumnVarNameInTable="columnPrice_other" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Takhfif" msprop:Generator_ColumnPropNameInTable="TakhfifColumn" msprop:Generator_ColumnPropNameInRow="Takhfif" msprop:Generator_UserColumnName="Takhfif" msprop:Generator_ColumnVarNameInTable="columnTakhfif" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Code_faktor" msprop:Generator_ColumnPropNameInTable="Code_faktorColumn" msprop:Generator_ColumnPropNameInRow="Code_faktor" msprop:Generator_UserColumnName="Code_faktor" msprop:Generator_ColumnVarNameInTable="columnCode_faktor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Date_faktor" msprop:Generator_ColumnPropNameInTable="Date_faktorColumn" msprop:Generator_ColumnPropNameInRow="Date_faktor" msprop:Generator_UserColumnName="Date_faktor" msprop:Generator_ColumnVarNameInTable="columnDate_faktor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Code_fro" msprop:Generator_ColumnPropNameInTable="Code_froColumn" msprop:Generator_ColumnPropNameInRow="Code_fro" msprop:Generator_UserColumnName="Code_fro" msprop:Generator_ColumnVarNameInTable="columnCode_fro" type="xs:int" minOccurs="0" />
+              <xs:element name="DaraiFlag" msprop:Generator_ColumnPropNameInTable="DaraiFlagColumn" msprop:Generator_ColumnPropNameInRow="DaraiFlag" msprop:Generator_UserColumnName="DaraiFlag" msprop:Generator_ColumnVarNameInTable="columnDaraiFlag" type="xs:boolean" />
+              <xs:element name="Pay" msprop:Generator_ColumnPropNameInTable="PayColumn" msprop:Generator_ColumnPropNameInRow="Pay" msprop:Generator_UserColumnName="Pay" msprop:Generator_ColumnVarNameInTable="columnPay" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_ResidrRiz" msprop:Generator_RowEvHandlerName="View_ResidrRizRowChangeEventHandler" msprop:Generator_RowDeletedName="View_ResidrRizRowDeleted" msprop:Generator_RowDeletingName="View_ResidrRizRowDeleting" msprop:Generator_RowEvArgName="View_ResidrRizRowChangeEvent" msprop:Generator_TablePropName="View_ResidrRiz" msprop:Generator_RowChangedName="View_ResidrRizRowChanged" msprop:Generator_UserTableName="View_ResidrRiz" msprop:Generator_RowChangingName="View_ResidrRizRowChanging" msprop:Generator_RowClassName="View_ResidrRizRow" msprop:Generator_TableClassName="View_ResidrRizDataTable" msprop:Generator_TableVarName="tableView_ResidrRiz">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Code_rz" msprop:Generator_ColumnPropNameInTable="Code_rzColumn" msprop:Generator_ColumnPropNameInRow="Code_rz" msprop:Generator_UserColumnName="Code_rz" msprop:Generator_ColumnVarNameInTable="columnCode_rz" type="xs:int" />
+              <xs:element name="Code_resid" msprop:Generator_ColumnPropNameInTable="Code_residColumn" msprop:Generator_ColumnPropNameInRow="Code_resid" msprop:Generator_UserColumnName="Code_resid" msprop:Generator_ColumnVarNameInTable="columnCode_resid" type="xs:int" minOccurs="0" />
+              <xs:element name="Name_matter" msprop:Generator_ColumnPropNameInTable="Name_matterColumn" msprop:Generator_ColumnPropNameInRow="Name_matter" msprop:Generator_UserColumnName="Name_matter" msprop:Generator_ColumnVarNameInTable="columnName_matter" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vaznResid" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="vaznResidColumn" msprop:Generator_ColumnPropNameInRow="vaznResid" msprop:Generator_UserColumnName="vaznResid" msprop:Generator_ColumnVarNameInTable="columnvaznResid" type="xs:decimal" minOccurs="0" />
+              <xs:element name="vaznKhales" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="vaznKhalesColumn" msprop:Generator_ColumnPropNameInRow="vaznKhales" msprop:Generator_UserColumnName="vaznKhales" msprop:Generator_ColumnVarNameInTable="columnvaznKhales" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VaznKasr" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="VaznKasrColumn" msprop:Generator_ColumnPropNameInRow="VaznKasr" msprop:Generator_UserColumnName="VaznKasr" msprop:Generator_ColumnVarNameInTable="columnVaznKasr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Price_tamam" msprop:Generator_ColumnPropNameInTable="Price_tamamColumn" msprop:Generator_ColumnPropNameInRow="Price_tamam" msprop:Generator_UserColumnName="Price_tamam" msprop:Generator_ColumnVarNameInTable="columnPrice_tamam" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Price_vahed" msprop:Generator_ColumnPropNameInTable="Price_vahedColumn" msprop:Generator_ColumnPropNameInRow="Price_vahed" msprop:Generator_UserColumnName="Price_vahed" msprop:Generator_ColumnVarNameInTable="columnPrice_vahed" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Darsad_oft" msprop:Generator_ColumnPropNameInTable="Darsad_oftColumn" msprop:Generator_ColumnPropNameInRow="Darsad_oft" msprop:Generator_UserColumnName="Darsad_oft" msprop:Generator_ColumnVarNameInTable="columnDarsad_oft" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Code_matter" msprop:Generator_ColumnPropNameInTable="Code_matterColumn" msprop:Generator_ColumnPropNameInRow="Code_matter" msprop:Generator_UserColumnName="Code_matter" msprop:Generator_ColumnVarNameInTable="columnCode_matter" type="xs:int" minOccurs="0" />
+              <xs:element name="Takhfif" msprop:Generator_ColumnPropNameInTable="TakhfifColumn" msprop:Generator_ColumnPropNameInRow="Takhfif" msprop:Generator_UserColumnName="Takhfif" msprop:Generator_ColumnVarNameInTable="columnTakhfif" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Tax" msprop:Generator_ColumnPropNameInTable="TaxColumn" msprop:Generator_ColumnPropNameInRow="Tax" msprop:Generator_UserColumnName="Tax" msprop:Generator_ColumnVarNameInTable="columnTax" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PriceORG" msprop:Generator_ColumnPropNameInTable="PriceORGColumn" msprop:Generator_ColumnPropNameInRow="PriceORG" msprop:Generator_UserColumnName="PriceORG" msprop:Generator_ColumnVarNameInTable="columnPriceORG" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_RptResid" msprop:Generator_RowEvHandlerName="View_RptResidRowChangeEventHandler" msprop:Generator_RowDeletedName="View_RptResidRowDeleted" msprop:Generator_RowDeletingName="View_RptResidRowDeleting" msprop:Generator_RowEvArgName="View_RptResidRowChangeEvent" msprop:Generator_TablePropName="View_RptResid" msprop:Generator_RowChangedName="View_RptResidRowChanged" msprop:Generator_UserTableName="View_RptResid" msprop:Generator_RowChangingName="View_RptResidRowChanging" msprop:Generator_RowClassName="View_RptResidRow" msprop:Generator_TableClassName="View_RptResidDataTable" msprop:Generator_TableVarName="tableView_RptResid">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Code_resid" msprop:Generator_ColumnPropNameInTable="Code_residColumn" msprop:Generator_ColumnPropNameInRow="Code_resid" msprop:Generator_UserColumnName="Code_resid" msprop:Generator_ColumnVarNameInTable="columnCode_resid" type="xs:int" />
+              <xs:element name="name_fro" msprop:Generator_ColumnPropNameInTable="name_froColumn" msprop:Generator_ColumnPropNameInRow="name_fro" msprop:Generator_UserColumnName="name_fro" msprop:Generator_ColumnVarNameInTable="columnname_fro" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Date_resid" msprop:Generator_ColumnPropNameInTable="Date_residColumn" msprop:Generator_ColumnPropNameInRow="Date_resid" msprop:Generator_UserColumnName="Date_resid" msprop:Generator_ColumnVarNameInTable="columnDate_resid" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name_anbar" msprop:Generator_ColumnPropNameInTable="Name_anbarColumn" msprop:Generator_ColumnPropNameInRow="Name_anbar" msprop:Generator_UserColumnName="Name_anbar" msprop:Generator_ColumnVarNameInTable="columnName_anbar" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name_matter" msprop:Generator_ColumnPropNameInTable="Name_matterColumn" msprop:Generator_ColumnPropNameInRow="Name_matter" msprop:Generator_UserColumnName="Name_matter" msprop:Generator_ColumnVarNameInTable="columnName_matter" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vaznResid" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="vaznResidColumn" msprop:Generator_ColumnPropNameInRow="vaznResid" msprop:Generator_UserColumnName="vaznResid" msprop:Generator_ColumnVarNameInTable="columnvaznResid" type="xs:decimal" minOccurs="0" />
+              <xs:element name="vaznKhales" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="vaznKhalesColumn" msprop:Generator_ColumnPropNameInRow="vaznKhales" msprop:Generator_UserColumnName="vaznKhales" msprop:Generator_ColumnVarNameInTable="columnvaznKhales" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VaznKasr" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="VaznKasrColumn" msprop:Generator_ColumnPropNameInRow="VaznKasr" msprop:Generator_UserColumnName="VaznKasr" msprop:Generator_ColumnVarNameInTable="columnVaznKasr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Price_tamam" msprop:Generator_ColumnPropNameInTable="Price_tamamColumn" msprop:Generator_ColumnPropNameInRow="Price_tamam" msprop:Generator_UserColumnName="Price_tamam" msprop:Generator_ColumnVarNameInTable="columnPrice_tamam" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Code_matter" msprop:Generator_ColumnPropNameInTable="Code_matterColumn" msprop:Generator_ColumnPropNameInRow="Code_matter" msprop:Generator_UserColumnName="Code_matter" msprop:Generator_ColumnVarNameInTable="columnCode_matter" type="xs:int" minOccurs="0" />
+              <xs:element name="Price_vahed" msprop:Generator_ColumnPropNameInTable="Price_vahedColumn" msprop:Generator_ColumnPropNameInRow="Price_vahed" msprop:Generator_UserColumnName="Price_vahed" msprop:Generator_ColumnVarNameInTable="columnPrice_vahed" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Code_fro" msprop:Generator_ColumnPropNameInTable="Code_froColumn" msprop:Generator_ColumnPropNameInRow="Code_fro" msprop:Generator_UserColumnName="Code_fro" msprop:Generator_ColumnVarNameInTable="columnCode_fro" type="xs:int" minOccurs="0" />
+              <xs:element name="Number_car" msprop:Generator_ColumnPropNameInTable="Number_carColumn" msprop:Generator_ColumnPropNameInRow="Number_car" msprop:Generator_UserColumnName="Number_car" msprop:Generator_ColumnVarNameInTable="columnNumber_car" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Code_faktor" msprop:Generator_ColumnPropNameInTable="Code_faktorColumn" msprop:Generator_ColumnPropNameInRow="Code_faktor" msprop:Generator_UserColumnName="Code_faktor" msprop:Generator_ColumnVarNameInTable="columnCode_faktor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Price_haml" msprop:Generator_ColumnPropNameInTable="Price_hamlColumn" msprop:Generator_ColumnPropNameInRow="Price_haml" msprop:Generator_UserColumnName="Price_haml" msprop:Generator_ColumnVarNameInTable="columnPrice_haml" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Takhfif" msprop:Generator_ColumnPropNameInTable="TakhfifColumn" msprop:Generator_ColumnPropNameInRow="Takhfif" msprop:Generator_UserColumnName="Takhfif" msprop:Generator_ColumnVarNameInTable="columnTakhfif" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Tax" msprop:Generator_ColumnPropNameInTable="TaxColumn" msprop:Generator_ColumnPropNameInRow="Tax" msprop:Generator_UserColumnName="Tax" msprop:Generator_ColumnVarNameInTable="columnTax" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PhKilo" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="PhKiloColumn" msprop:Generator_ColumnPropNameInRow="PhKilo" msprop:Generator_UserColumnName="PhKilo" msprop:Generator_ColumnVarNameInTable="columnPhKilo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PriceORG" msprop:Generator_ColumnPropNameInTable="PriceORGColumn" msprop:Generator_ColumnPropNameInRow="PriceORG" msprop:Generator_UserColumnName="PriceORG" msprop:Generator_ColumnVarNameInTable="columnPriceORG" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Tbl_NoeResid" msprop:Generator_RowEvHandlerName="Tbl_NoeResidRowChangeEventHandler" msprop:Generator_RowDeletedName="Tbl_NoeResidRowDeleted" msprop:Generator_RowDeletingName="Tbl_NoeResidRowDeleting" msprop:Generator_RowEvArgName="Tbl_NoeResidRowChangeEvent" msprop:Generator_TablePropName="Tbl_NoeResid" msprop:Generator_RowChangedName="Tbl_NoeResidRowChanged" msprop:Generator_UserTableName="Tbl_NoeResid" msprop:Generator_RowChangingName="Tbl_NoeResidRowChanging" msprop:Generator_RowClassName="Tbl_NoeResidRow" msprop:Generator_TableClassName="Tbl_NoeResidDataTable" msprop:Generator_TableVarName="tableTbl_NoeResid">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnVarNameInTable="columnid" type="xs:int" minOccurs="0" />
+              <xs:element name="Pay" msprop:Generator_ColumnPropNameInTable="PayColumn" msprop:Generator_ColumnPropNameInRow="Pay" msprop:Generator_UserColumnName="Pay" msprop:Generator_ColumnVarNameInTable="columnPay" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Amani" msprop:Generator_RowEvHandlerName="View_AmaniRowChangeEventHandler" msprop:Generator_RowDeletedName="View_AmaniRowDeleted" msprop:Generator_RowDeletingName="View_AmaniRowDeleting" msprop:Generator_RowEvArgName="View_AmaniRowChangeEvent" msprop:Generator_TablePropName="View_Amani" msprop:Generator_RowChangedName="View_AmaniRowChanged" msprop:Generator_UserTableName="View_Amani" msprop:Generator_RowChangingName="View_AmaniRowChanging" msprop:Generator_RowClassName="View_AmaniRow" msprop:Generator_TableClassName="View_AmaniDataTable" msprop:Generator_TableVarName="tableView_Amani">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFtype" msprop:Generator_ColumnPropNameInTable="IDFtypeColumn" msprop:Generator_ColumnPropNameInRow="IDFtype" msprop:Generator_UserColumnName="IDFtype" msprop:Generator_ColumnVarNameInTable="columnIDFtype" type="xs:int" minOccurs="0" />
+              <xs:element name="FtypeC" msdata:Caption="نوع" msprop:Generator_ColumnPropNameInTable="FtypeCColumn" msprop:Generator_ColumnPropNameInRow="FtypeC" msprop:Generator_UserColumnName="FtypeC" msprop:Generator_ColumnVarNameInTable="columnFtypeC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FCode" msdata:Caption="کد" msprop:Generator_ColumnPropNameInTable="FCodeColumn" msprop:Generator_ColumnPropNameInRow="FCode" msprop:Generator_UserColumnName="FCode" msprop:Generator_ColumnVarNameInTable="columnFCode" type="xs:int" />
+              <xs:element name="FDate" msdata:Caption="تاریخ" msprop:Generator_ColumnPropNameInTable="FDateColumn" msprop:Generator_ColumnPropNameInRow="FDate" msprop:Generator_UserColumnName="FDate" msprop:Generator_ColumnVarNameInTable="columnFDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TitleMatter" msdata:Caption="جنس" msprop:Generator_ColumnPropNameInTable="TitleMatterColumn" msprop:Generator_ColumnPropNameInRow="TitleMatter" msprop:Generator_UserColumnName="TitleMatter" msprop:Generator_ColumnVarNameInTable="columnTitleMatter" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Code_fro" msprop:Generator_ColumnPropNameInTable="Code_froColumn" msprop:Generator_ColumnPropNameInRow="Code_fro" msprop:Generator_UserColumnName="Code_fro" msprop:Generator_ColumnVarNameInTable="columnCode_fro" type="xs:int" minOccurs="0" />
+              <xs:element name="name_fro" msdata:Caption="نام شخص" msprop:Generator_ColumnPropNameInTable="name_froColumn" msprop:Generator_ColumnPropNameInRow="name_fro" msprop:Generator_UserColumnName="name_fro" msprop:Generator_ColumnVarNameInTable="columnname_fro" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VKhorooj" msdata:Caption="خروجی" msprop:Generator_ColumnPropNameInTable="VKhoroojColumn" msprop:Generator_ColumnPropNameInRow="VKhorooj" msprop:Generator_UserColumnName="VKhorooj" msprop:Generator_ColumnVarNameInTable="columnVKhorooj" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VVorood" msdata:Caption="ورودی" msprop:Generator_ColumnPropNameInTable="VVoroodColumn" msprop:Generator_ColumnPropNameInRow="VVorood" msprop:Generator_UserColumnName="VVorood" msprop:Generator_ColumnVarNameInTable="columnVVorood" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Anbar" />
+      <xs:field xpath="mstns:Code_anbar" />
+    </xs:unique>
+    <xs:unique name="View_Matter_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Matter" />
+      <xs:field xpath="mstns:Code_matter" />
+    </xs:unique>
+    <xs:unique name="View_Person_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Person" />
+      <xs:field xpath="mstns:Code_fro" />
+    </xs:unique>
+    <xs:unique name="View_Tahvil_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Tahvil" />
+      <xs:field xpath="mstns:Code_tahvil" />
+    </xs:unique>
+    <xs:unique name="View_Vahed_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Vahed" />
+      <xs:field xpath="mstns:Code_vahed" />
+    </xs:unique>
+    <xs:unique name="View_Driver_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Driver" />
+      <xs:field xpath="mstns:Code_fro" />
+    </xs:unique>
+    <xs:unique name="Tbl_Resid_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Tbl_Resid" />
+      <xs:field xpath="mstns:Code_resid" />
+    </xs:unique>
+    <xs:unique name="Tbl_ResidRiz_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Tbl_ResidRiz" />
+      <xs:field xpath="mstns:Code_rz" />
+    </xs:unique>
+    <xs:unique name="View_Resid_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Resid" />
+      <xs:field xpath="mstns:Code_resid" />
+    </xs:unique>
+    <xs:unique name="View_ResidrRiz_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_ResidrRiz" />
+      <xs:field xpath="mstns:Code_rz" />
+    </xs:unique>
+    <xs:unique name="View_RptResid_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_RptResid" />
+      <xs:field xpath="mstns:Code_resid" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_Tbl_ResidRiz_Tbl_Resid" msdata:parent="Tbl_Resid" msdata:child="Tbl_ResidRiz" msdata:parentkey="Code_resid" msdata:childkey="Code_resid" msprop:Generator_UserParentTable="Tbl_Resid" msprop:Generator_UserChildTable="Tbl_ResidRiz" msprop:Generator_RelationVarName="relationFK_Tbl_ResidRiz_Tbl_Resid" msprop:Generator_ChildPropName="GetTbl_ResidRizRows" msprop:Generator_ParentPropName="Tbl_ResidRow" msprop:Generator_UserRelationName="FK_Tbl_ResidRiz_Tbl_Resid" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

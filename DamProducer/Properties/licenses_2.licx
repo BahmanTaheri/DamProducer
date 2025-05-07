@@ -1,0 +1,4 @@
+﻿Public Class Frmparvaj
+
+    Private Sub Frmsetting_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Me.T
